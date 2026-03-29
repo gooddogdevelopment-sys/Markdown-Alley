@@ -16,3 +16,13 @@
 
 ## Crypto
 - [Coin Gecko](https://www.coingecko.com/)
+
+## Finance
+- [Alpha Vantage](https://www.alphavantage.co/)
+
+## Aviation
+- [Aviation Stack](https://aviationstack.com/)
+
+## Weather
+- [Open Air Quality](https://docs.openaq.org/)
+- [Open Weather](https://openweathermap.org/)
