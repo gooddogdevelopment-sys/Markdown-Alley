@@ -13,3 +13,5 @@ A personal collection of development documentation, notes, and resources. Hosted
 - [DbContext Setup](docs/Dotnet/Database/DotNetDbContext.md) — Setting up Entity Framework Core DbContext, dependency injection, and EF Core migrations
 - [Overriding SaveChanges](docs/Dotnet/Database/OverridingSaveChangesDbContext.md) — Automatically setting `CreatedAt`/`UpdatedAt` timestamps by overriding `SaveChangesAsync`
 - [Global Error Handling](docs/Dotnet/Middleware/GlobalErrorHandling.md) — Implementing global exception handling middleware in ASP.NET Core using `IExceptionHandler`
+- [GitHub Actions Build & Test](docs/Dotnet/Pipelines/GithubBuildAndTest.md) — Example GitHub Actions workflow to build, restore, and test a .NET project on push
+- [EditorConfig Example](docs/Dotnet/Coding%20Standards/editorconfig.md) — Example `.editorconfig` for enforcing .NET coding standards
