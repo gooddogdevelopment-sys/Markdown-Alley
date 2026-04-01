@@ -1,0 +1,31 @@
+﻿name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger only when you push to the main branch
+
+permissions:
+  contents: write  # Required to push the built site to the gh-pages branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Important for "last updated" timestamps
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material 
+          # Add any other plugins here (e.g., mkdocs-minify-plugin)
+
+      - name: Build and Deploy
+        run: mkdocs gh-deploy --force

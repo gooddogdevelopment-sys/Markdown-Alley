@@ -1,0 +1,6 @@
+﻿site_name: My Tech Docs
+theme:
+  name: material  # This uses the popular Material theme included in the image
+  palette:
+    scheme: slate # Dark mode, naturally.
+    primary: indigo
