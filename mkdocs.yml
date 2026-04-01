@@ -1,7 +1,12 @@
-﻿site_name: Markdown Alley
+site_name: Markdown Alley
 site_url: https://docs.gooddogdevelopment.com
 theme:
-  name: material  # This uses the popular Material theme included in the image
+  name: material
   palette:
-    scheme: slate # Dark mode, naturally.
+    scheme: slate
     primary: indigo
+
+extra:
+  analytics:
+    provider: google
+    property: G-CWQP6SC78V
