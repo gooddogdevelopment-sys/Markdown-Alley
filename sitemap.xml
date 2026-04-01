@@ -5,18 +5,6 @@
          <lastmod>2026-04-01</lastmod>
     </url>
     <url>
-         <loc>https://docs.gooddogdevelopment.com/APIs/</loc>
-         <lastmod>2026-04-01</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.gooddogdevelopment.com/CodingArticles/</loc>
-         <lastmod>2026-04-01</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.gooddogdevelopment.com/WebResources/</loc>
-         <lastmod>2026-04-01</lastmod>
-    </url>
-    <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Coding%20Standards/editorconfig/</loc>
          <lastmod>2026-04-01</lastmod>
     </url>
@@ -34,6 +22,22 @@
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Pipelines/GithubBuildAndTest/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/Dotnet/Templates/Core10WPostgres/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/General/APIs/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/General/CodingArticles/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/General/WebResources/</loc>
          <lastmod>2026-04-01</lastmod>
     </url>
 </urlset>

@@ -1,0 +1,2038 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.gooddogdevelopment.com/Dotnet/Templates/Core10WPostgres/">
+      
+      
+        <link rel="prev" href="../../Pipelines/GithubBuildAndTest/">
+      
+      
+        <link rel="next" href="../../../General/APIs/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>.NET 10 Core API with PostgreSQL Template - Markdown Alley</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-CWQP6SC78V"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-CWQP6SC78V",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-CWQP6SC78V",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#net-10-core-api-with-postgresql-template" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Markdown Alley" class="md-header__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Markdown Alley
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              .NET 10 Core API with PostgreSQL Template
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Markdown Alley" class="md-nav__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Markdown Alley
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to Markdown Alley
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dotnet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dotnet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Coding Standards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Coding%20Standards/editorconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editorconfig
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Database
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Database/DotNetDbContext/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Up DbContext
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Database/OverridingSaveChangesDbContext/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setting Values on Save in DbContext
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middleware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Middleware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Middleware/GlobalErrorHandling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Global Error Handling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipelines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pipelines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pipelines/GithubBuildAndTest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Example for Github Action Deploy Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    .NET 10 Core API with PostgreSQL Template
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    .NET 10 Core API with PostgreSQL Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuget-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NuGet Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-request-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Request Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extending-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extending Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbcontext-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DbContext Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DbContext Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appdbcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AppDbContext
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-timestamp-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatic Timestamp Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseentity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BaseEntity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swagger-openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Swagger / OpenAPI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swagger / OpenAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Middleware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Docs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-exception-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Exception Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Exception Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ping-health-check-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ping / Health Check Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-actions-ci-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Actions CI Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-development-without-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Development (without Docker)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Migrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-as-a-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using as a Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    General
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../General/APIs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../General/CodingArticles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coding Articles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../General/WebResources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuget-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NuGet Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-request-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Request Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extending-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extending Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbcontext-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DbContext Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DbContext Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appdbcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AppDbContext
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-timestamp-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatic Timestamp Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseentity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BaseEntity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swagger-openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Swagger / OpenAPI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swagger / OpenAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Middleware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Docs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-exception-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Exception Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Exception Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ping-health-check-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ping / Health Check Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dockerfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-actions-ci-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Actions CI Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-development-without-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Development (without Docker)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Migrations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-as-a-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using as a Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="net-10-core-api-with-postgresql-template">.NET 10 Core API with PostgreSQL Template</h1>
+<h2 id="overview">Overview</h2>
+<p>This is a production-ready .NET 10 Web API template pre-configured with PostgreSQL via Entity Framework Core. It is designed to serve as a clean, opinionated starting point for new API projects, eliminating boilerplate setup so you can focus on building features immediately.</p>
+<p><strong>Target Framework:</strong> .NET 10
+<strong>Database:</strong> PostgreSQL (via Npgsql EF Core provider)
+<strong>Repository:</strong> <code>dotnet-core-api-w-postgres</code></p>
+<p>The template bundles the following capabilities out of the box:</p>
+<ul>
+<li>Structured logging with <strong>Serilog</strong></li>
+<li>PostgreSQL database access via <strong>Entity Framework Core 10</strong></li>
+<li>API documentation via <strong>Swagger (Swashbuckle)</strong> and the native <strong>OpenAPI</strong> endpoint</li>
+<li>Global exception handling following <strong>RFC 9457 Problem Details</strong></li>
+<li>A <code>BaseEntity</code> model with automatic <code>CreatedAt</code>/<code>UpdatedAt</code> timestamp management</li>
+<li>Docker and Docker Compose support</li>
+<li>A GitHub Actions CI pipeline</li>
+</ul>
+<hr />
+<h2 id="project-structure">Project Structure</h2>
+<pre><code>dotnet-core-api-w-postgres/
+├── .github/
+│   └── workflows/
+│       └── build.yml              # CI pipeline
+├── dotnet-core-api-w-postgres/
+│   ├── Controllers/
+│   │   └── PingController.cs      # Health check endpoint
+│   ├── Data/
+│   │   └── AppDbContext.cs        # EF Core DbContext
+│   ├── Middleware/
+│   │   └── GlobalExceptionHandler.cs
+│   ├── Models/
+│   │   └── BaseEntity.cs          # Base model with audit fields
+│   ├── Properties/
+│   │   └── launchSettings.json
+│   ├── appsettings.json
+│   ├── appsettings.Development.json
+│   ├── Dockerfile
+│   └── Program.cs                 # Application entry point &amp; service registration
+├── compose.yaml                   # Docker Compose for local development
+└── dotnet-core-api-w-postgres.sln
+</code></pre>
+<hr />
+<h2 id="nuget-dependencies">NuGet Dependencies</h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Microsoft.AspNetCore.OpenApi</code></td>
+<td>10.0.2</td>
+<td>Native OpenAPI endpoint (<code>/openapi/v1.json</code>)</td>
+</tr>
+<tr>
+<td><code>Microsoft.EntityFrameworkCore.Design</code></td>
+<td>10.0.5</td>
+<td>EF Core tooling (migrations, scaffolding)</td>
+</tr>
+<tr>
+<td><code>Npgsql.EntityFrameworkCore.PostgreSQL</code></td>
+<td>10.0.1</td>
+<td>PostgreSQL EF Core provider</td>
+</tr>
+<tr>
+<td><code>Serilog.AspNetCore</code></td>
+<td>10.0.0</td>
+<td>Structured logging + HTTP request logging</td>
+</tr>
+<tr>
+<td><code>Swashbuckle.AspNetCore</code></td>
+<td>10.1.5</td>
+<td>Swagger UI and Swagger JSON generation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="logging">Logging</h2>
+<p>Logging is handled by <strong>Serilog</strong>, configured directly in <code>Program.cs</code> before the application builder is built. This ensures that any startup errors are captured by the logger.</p>
+<pre><code class="language-csharp">Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+</code></pre>
+<p>The logger is configured with:</p>
+<ul>
+<li><strong>Minimum level:</strong> <code>Information</code> — debug-level noise is suppressed in all environments by default.</li>
+<li><strong>Console sink:</strong> All log output goes to stdout, making it compatible with Docker and cloud log aggregators.</li>
+<li><strong>Log context enrichment:</strong> Properties pushed onto the <code>LogContext</code> (e.g., correlation IDs, user identifiers) are automatically included in every log event within that context scope.</li>
+</ul>
+<h3 id="http-request-logging">HTTP Request Logging</h3>
+<p>After the app is built, Serilog's request logging middleware is registered:</p>
+<pre><code class="language-csharp">app.UseSerilogRequestLogging();
+</code></pre>
+<p>This replaces ASP.NET Core's default per-request log output with a single, structured Serilog log event per request, including method, path, status code, and elapsed time. This middleware is optional and can be removed if the default ASP.NET Core request logging is preferred.</p>
+<h3 id="extending-logging">Extending Logging</h3>
+<p>To add additional sinks (e.g., file, Seq, Application Insights), extend the <code>LoggerConfiguration</code> chain in <code>Program.cs</code>:</p>
+<pre><code class="language-csharp">Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File(&quot;logs/log-.txt&quot;, rollingInterval: RollingInterval.Day) // example
+    .Enrich.FromLogContext()
+    .CreateLogger();
+</code></pre>
+<hr />
+<h2 id="dbcontext-configuration">DbContext Configuration</h2>
+<h3 id="registration">Registration</h3>
+<p>The <code>AppDbContext</code> is registered in <code>Program.cs</code> using the <code>Default</code> connection string from configuration:</p>
+<pre><code class="language-csharp">builder.Services.AddDbContext&lt;AppDbContext&gt;(opts =&gt;
+    opts.UseNpgsql(builder.Configuration.GetConnectionString(&quot;Default&quot;)));
+</code></pre>
+<p>The connection string should be added to <code>appsettings.json</code> (or via an environment variable / secrets manager in production):</p>
+<pre><code class="language-json">{
+  &quot;ConnectionStrings&quot;: {
+    &quot;Default&quot;: &quot;Host=localhost;Database=dotnet_api_db;Username=postgres;Password=postgres&quot;
+  }
+}
+</code></pre>
+<p>When running via Docker Compose the connection string is injected through the environment variable <code>ConnectionStrings__Default</code> (note the double underscore — ASP.NET Core's configuration system maps this to the <code>ConnectionStrings:Default</code> key, matching the <code>"Default"</code> key used in <code>GetConnectionString("Default")</code>).</p>
+<blockquote>
+<p><strong>Note:</strong> The <code>compose.yaml</code> in this template uses <code>ConnectionStrings__DefaultConnection</code>, which would map to the key <code>"DefaultConnection"</code> — a mismatch with the <code>"Default"</code> key expected by <code>Program.cs</code>. If you use Docker Compose and find the API cannot connect to the database, update the environment variable in <code>compose.yaml</code> from <code>ConnectionStrings__DefaultConnection</code> to <code>ConnectionStrings__Default</code>.</p>
+</blockquote>
+<h3 id="appdbcontext">AppDbContext</h3>
+<p><code>AppDbContext</code> extends <code>DbContext</code> and uses the primary constructor pattern introduced in C# 12:</p>
+<pre><code class="language-csharp">public class AppDbContext(DbContextOptions&lt;AppDbContext&gt; options) : DbContext(options)
+</code></pre>
+<p><strong>Entity configurations</strong> are loaded automatically via <code>OnModelCreating</code>:</p>
+<pre><code class="language-csharp">modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+</code></pre>
+<p>Any class implementing <code>IEntityTypeConfiguration&lt;T&gt;</code> in the assembly will be discovered and applied automatically. This keeps entity configuration out of <code>AppDbContext</code> and in dedicated, per-entity configuration classes.</p>
+<p><strong>Adding new entities</strong> — uncomment or add a <code>DbSet</code> property following the pattern shown in the placeholder comment:</p>
+<pre><code class="language-csharp">public DbSet&lt;MyEntity&gt; MyEntities =&gt; Set&lt;MyEntity&gt;();
+</code></pre>
+<h3 id="automatic-timestamp-management">Automatic Timestamp Management</h3>
+<p><code>SaveChangesAsync</code> is overridden to automatically manage <code>CreatedAt</code> and <code>UpdatedAt</code> on any entity that inherits from <code>BaseEntity</code>:</p>
+<pre><code class="language-csharp">public override Task&lt;int&gt; SaveChangesAsync(CancellationToken ct = default)
+{
+    var now = DateTime.UtcNow;
+
+    foreach (var entry in ChangeTracker.Entries&lt;BaseEntity&gt;())
+    {
+        switch (entry.State)
+        {
+            case EntityState.Added:
+                entry.Entity.CreatedAt = now;
+                entry.Entity.UpdatedAt = now;
+                break;
+            case EntityState.Modified:
+                entry.Entity.UpdatedAt = now;
+                entry.Property(e =&gt; e.CreatedAt).IsModified = false; // prevents overwrite
+                break;
+        }
+    }
+
+    return base.SaveChangesAsync(ct);
+}
+</code></pre>
+<p>All timestamps are stored in <strong>UTC</strong>. On <code>Added</code>, both fields are set. On <code>Modified</code>, only <code>UpdatedAt</code> is set and <code>CreatedAt</code> is explicitly marked as unmodified to prevent accidental overwrites.</p>
+<h3 id="baseentity">BaseEntity</h3>
+<p>All domain entities should inherit from <code>BaseEntity</code> to get automatic audit field management:</p>
+<pre><code class="language-csharp">public abstract class BaseEntity
+{
+    [Key]
+    public int Id { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+}
+</code></pre>
+<hr />
+<h2 id="swagger-openapi">Swagger / OpenAPI</h2>
+<p>The template registers both <strong>Swashbuckle</strong> (for the Swagger UI) and the native <strong>ASP.NET Core OpenAPI</strong> endpoint.</p>
+<h3 id="registration_1">Registration</h3>
+<pre><code class="language-csharp">builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =&gt;
+{
+    c.SwaggerDoc(&quot;v1&quot;, new OpenApiInfo { Title = &quot;API Template&quot;, Version = &quot;v1&quot; });
+    c.AddSecurityDefinition(&quot;Bearer&quot;, new OpenApiSecurityScheme
+    {
+        Name = &quot;Authorization&quot;,
+        Type = SecuritySchemeType.ApiKey,
+        In = ParameterLocation.Header,
+        Description = &quot;JWT Authorization header using the Bearer scheme. Example: \&quot;Bearer {token}\&quot;&quot;
+    });
+});
+builder.Services.AddOpenApi();
+</code></pre>
+<p>A Bearer token security definition is pre-registered in the Swagger UI, making it straightforward to test authenticated endpoints once authentication middleware is wired up.</p>
+<h3 id="middleware">Middleware</h3>
+<pre><code class="language-csharp">app.MapOpenApi();     // Native OpenAPI JSON: /openapi/v1.json
+app.UseSwagger();     // Swashbuckle JSON: /swagger/v1/swagger.json
+app.UseSwaggerUI();   // Swagger UI: /swagger/index.html
+</code></pre>
+<p>By default, the Swagger UI is available in <strong>all environments</strong>. If you want to restrict it to the development environment only, replace the above block with the commented-out version already present in <code>Program.cs</code>:</p>
+<pre><code class="language-csharp">if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+</code></pre>
+<h3 id="accessing-the-docs">Accessing the Docs</h3>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/swagger/index.html</code></td>
+<td>Swagger UI</td>
+</tr>
+<tr>
+<td><code>/swagger/v1/swagger.json</code></td>
+<td>Swashbuckle-generated OpenAPI JSON</td>
+</tr>
+<tr>
+<td><code>/openapi/v1.json</code></td>
+<td>Native ASP.NET Core OpenAPI JSON</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="global-exception-handling">Global Exception Handling</h2>
+<p>Unhandled exceptions are caught by <code>GlobalExceptionHandler</code>, which implements <code>IExceptionHandler</code> — the standard ASP.NET Core exception handling interface introduced in .NET 8.</p>
+<h3 id="registration_2">Registration</h3>
+<pre><code class="language-csharp">builder.Services.AddExceptionHandler&lt;GlobalExceptionHandler&gt;();
+builder.Services.AddProblemDetails();
+</code></pre>
+<h3 id="behavior">Behavior</h3>
+<p>The handler logs every unhandled exception at the <code>Error</code> level and returns a structured <strong>RFC 9457 Problem Details</strong> JSON response. Specific exception types are mapped to appropriate HTTP status codes:</p>
+<table>
+<thead>
+<tr>
+<th>Exception Type</th>
+<th>HTTP Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ArgumentException</code></td>
+<td>400 Bad Request</td>
+</tr>
+<tr>
+<td><code>KeyNotFoundException</code></td>
+<td>404 Not Found</td>
+</tr>
+<tr>
+<td><code>UnauthorizedAccessException</code></td>
+<td>401 Unauthorized</td>
+</tr>
+<tr>
+<td>All other exceptions</td>
+<td>500 Internal Server Error</td>
+</tr>
+</tbody>
+</table>
+<p>Every response includes the ASP.NET Core <code>TraceIdentifier</code> as an extension field (<code>traceId</code>), enabling correlation between client-facing error responses and server-side log entries.</p>
+<p><strong>Example response:</strong></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: 404,
+  &quot;title&quot;: &quot;Not Found&quot;,
+  &quot;detail&quot;: &quot;The requested resource could not be found.&quot;,
+  &quot;traceId&quot;: &quot;00-abc123-def456-00&quot;
+}
+</code></pre>
+<p>To add new exception mappings, extend the <code>switch</code> expression in <code>GlobalExceptionHandler.TryHandleAsync</code>.</p>
+<hr />
+<h2 id="ping-health-check-endpoint">Ping / Health Check Endpoint</h2>
+<p>A <code>PingController</code> is included as a minimal health check:</p>
+<pre><code>GET /ping  →  200 OK  &quot;Pong&quot;
+</code></pre>
+<p>This is also the endpoint used by the Docker Compose health check for the API container.</p>
+<hr />
+<h2 id="docker">Docker</h2>
+<h3 id="dockerfile">Dockerfile</h3>
+<p>The <code>Dockerfile</code> uses a multi-stage build:</p>
+<ol>
+<li><strong>base</strong> — runtime image (<code>mcr.microsoft.com/dotnet/aspnet:10.0</code>), exposes ports <code>8080</code> and <code>8081</code>.</li>
+<li><strong>build</strong> — SDK image (<code>mcr.microsoft.com/dotnet/sdk:10.0</code>), restores and builds the project in Release configuration.</li>
+<li><strong>publish</strong> — publishes the build output.</li>
+<li><strong>final</strong> — copies the published output into the runtime image.</li>
+</ol>
+<p>The default target OS for Docker is <strong>Linux</strong> (set via <code>&lt;DockerDefaultTargetOS&gt;Linux&lt;/DockerDefaultTargetOS&gt;</code> in the <code>.csproj</code>).</p>
+<h3 id="docker-compose">Docker Compose</h3>
+<p><code>compose.yaml</code> defines a local development stack with two services:</p>
+<p><strong>postgres</strong> — PostgreSQL 16 with a persistent named volume (<code>postgres_data</code>) and a health check that polls <code>pg_isready</code>.</p>
+<p><strong>dotnet-core-api-w-postgres</strong> — The API container, which:
+- Builds from the local <code>Dockerfile</code>
+- Exposes ports <code>8080</code> (HTTP) and <code>8081</code> (HTTPS)
+- Injects the database connection string via environment variable
+- Depends on the <code>postgres</code> service being healthy before starting
+- Has its own health check that polls <code>GET /ping</code></p>
+<p>Both services run on a shared bridge network (<code>dotnet_network</code>).</p>
+<p><strong>To start the full stack locally:</strong></p>
+<pre><code class="language-bash">docker compose up --build
+</code></pre>
+<hr />
+<h2 id="github-actions-ci-pipeline">GitHub Actions CI Pipeline</h2>
+<p>The workflow defined in <code>.github/workflows/build.yml</code> runs on every push and pull request to <code>main</code>.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Checkout the repository</li>
+<li>Set up .NET 10</li>
+<li>Restore NuGet dependencies</li>
+<li>Build the solution in Release configuration</li>
+<li>Run all tests and output results in TRX format</li>
+<li>Upload test results as a build artifact (always, even on failure)</li>
+</ol>
+<hr />
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="local-development-without-docker">Local Development (without Docker)</h3>
+<ol>
+<li>Ensure you have the <a href="https://dotnet.microsoft.com/download">.NET 10 SDK</a> installed.</li>
+<li>Start a local PostgreSQL instance (or use the Docker Compose <code>postgres</code> service: <code>docker compose up postgres -d</code>).</li>
+<li>Add your connection string to <code>appsettings.Development.json</code>:</li>
+</ol>
+<pre><code class="language-json">{
+  &quot;ConnectionStrings&quot;: {
+    &quot;Default&quot;: &quot;Host=localhost;Database=dotnet_api_db;Username=postgres;Password=postgres&quot;
+  }
+}
+</code></pre>
+<ol>
+<li>Run the application:</li>
+</ol>
+<pre><code class="language-bash">dotnet run --project dotnet-core-api-w-postgres
+</code></pre>
+<ol>
+<li>Open the Swagger UI at <code>http://localhost:5109/swagger/index.html</code>.</li>
+</ol>
+<h3 id="running-migrations">Running Migrations</h3>
+<pre><code class="language-bash"># Add a new migration
+dotnet ef migrations add &lt;MigrationName&gt; --project dotnet-core-api-w-postgres
+
+# Apply migrations to the database
+dotnet ef database update --project dotnet-core-api-w-postgres
+</code></pre>
+<h3 id="using-as-a-template">Using as a Template</h3>
+<p>To use this as the base for a new project, clone the repository and do a global find-and-replace of <code>dotnet-core-api-w-postgres</code> and <code>dotnet_core_api_w_postgres</code> with your new project name. Update the <code>SwaggerDoc</code> title in <code>Program.cs</code> to reflect the new API name.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
