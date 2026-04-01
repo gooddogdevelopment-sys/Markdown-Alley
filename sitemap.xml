@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/APIs/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/CodingArticles/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/WebResources/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/Dotnet/Coding%20Standards/editorconfig/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/DotNetDbContext/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/OverridingSaveChangesDbContext/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/Dotnet/Middleware/GlobalErrorHandling/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/Dotnet/Pipelines/GithubBuildAndTest/</loc>
+         <lastmod>2026-04-01</lastmod>
+    </url>
 </urlset>
