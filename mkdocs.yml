@@ -1,4 +1,5 @@
 ﻿site_name: My Tech Docs
+site_url: https://docs.gooddogdevelopment.com
 theme:
   name: material  # This uses the popular Material theme included in the image
   palette:
