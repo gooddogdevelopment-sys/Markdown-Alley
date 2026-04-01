@@ -4,9 +4,9 @@ A personal collection of development documentation, notes, and resources. Hosted
 
 ## Table of Contents
 
-- [APIs](docs/APIs.md) — Curated list of publicly accessible APIs organized by category (News, Geography, Space, Finance, Weather, and more)
-- [Coding Articles](docs/CodingArticles.md) — Links to useful coding tutorials and articles
-- [Web Resources](docs/WebResources.md) — Web-based development tools and resources
+- [APIs](docs/General/APIs.md) — Curated list of publicly accessible APIs organized by category (News, Geography, Space, Finance, Weather, and more)
+- [Coding Articles](docs/General/CodingArticles.md) — Links to useful coding tutorials and articles
+- [Web Resources](docs/General/WebResources.md) — Web-based development tools and resources
 
 ### .NET
 
