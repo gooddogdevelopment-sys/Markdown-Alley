@@ -78,7 +78,7 @@ networks:
     internal: true  # This blocks all external internet traffic
 ```
 
->[!NOTE] 
+> **NOTE** 
 > To download a model, the interal flag on the network needs to be set to false.
 
 ## Downloading a model
