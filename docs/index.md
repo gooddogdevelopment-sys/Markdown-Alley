@@ -4,7 +4,11 @@ A personal knowledge base for development notes, references, and resources. Use 
 
 ## What's Here
 
-**[.NET](Dotnet/Database/DotNetDbContext.md)** — Coding standards, database patterns, middleware, and CI/CD pipeline examples for .NET projects.
+**[AI](AI/Ollama/DockerSetup.md)** — Docker setup guides for running local AI models and tooling.
+
+**[.NET](Dotnet/Database/DotNetDbContext.md)** — Coding standards, database patterns, middleware, CI/CD pipeline examples, and project templates for .NET projects.
+
+**[TypeScript](Typescript/NestJS/BasicSetup.md)** — NestJS setup guides including Swagger configuration and controller annotations.
 
 **[APIs](General/APIs.md)** — A curated list of free-tier APIs covering news, weather, finance, aviation, crypto, geography, and more.
 
