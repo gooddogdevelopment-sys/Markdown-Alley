@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.gooddogdevelopment.com/Dotnet/Database/DotNetDbContext/">
+        <link rel="canonical" href="https://docs.gooddogdevelopment.com/AI/Ollama/DockerSetup/">
       
       
-        <link rel="prev" href="../AutoApplyMigrations/">
+        <link rel="prev" href="../../..">
       
       
-        <link rel="next" href="../OverridingSaveChangesDbContext/">
+        <link rel="next" href="../../../Dotnet/Coding%20Standards/editorconfig/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Setting Up DbContext - Markdown Alley</title>
+        <title>Docker Setup For Ollama - Markdown Alley</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-dbcontext" class="md-skip">
+        <a href="#docker-setup-for-ollama" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setting Up DbContext
+              Docker Setup For Ollama
             
           </span>
         </div>
@@ -240,18 +240,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -272,7 +274,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -287,18 +289,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -319,7 +323,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -334,10 +338,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../AI/Ollama/DockerSetup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Setup For Ollama
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -353,6 +384,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-with-private-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup with Private Network
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Downloading a model
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -377,20 +461,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -411,7 +493,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -476,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Coding%20Standards/editorconfig/" class="md-nav__link">
+      <a href="../../../Dotnet/Coding%20Standards/editorconfig/" class="md-nav__link">
         
   
   
@@ -509,20 +591,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -543,7 +623,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -561,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AutoApplyMigrations/" class="md-nav__link">
+      <a href="../../../Dotnet/Database/AutoApplyMigrations/" class="md-nav__link">
         
   
   
@@ -586,37 +666,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Setting Up DbContext
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Dotnet/Database/DotNetDbContext/" class="md-nav__link">
         
   
   
@@ -632,109 +685,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-required-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Required Packages
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-defining-the-entities" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Defining the Entities
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-creating-the-appdbcontext-class" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Creating the AppDbContext Class
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-registering-in-dependency-injection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Registering in Dependency Injection
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-applying-migrations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Applying Migrations
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Applying Migrations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-the-initial-migration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Create the initial migration:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apply-the-migration-to-the-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Apply the migration to the database:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -747,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OverridingSaveChangesDbContext/" class="md-nav__link">
+      <a href="../../../Dotnet/Database/OverridingSaveChangesDbContext/" class="md-nav__link">
         
   
   
@@ -830,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Middleware/GlobalErrorHandling/" class="md-nav__link">
+      <a href="../../../Dotnet/Middleware/GlobalErrorHandling/" class="md-nav__link">
         
   
   
@@ -913,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Pipelines/GithubBuildAndTest/" class="md-nav__link">
+      <a href="../../../Dotnet/Pipelines/GithubBuildAndTest/" class="md-nav__link">
         
   
   
@@ -996,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Templates/Core10WPostgres/" class="md-nav__link">
+      <a href="../../../Dotnet/Templates/Core10WPostgres/" class="md-nav__link">
         
   
   
@@ -1445,10 +1395,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-required-packages" class="md-nav__link">
+  <a href="#standard-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Required Packages
+        Standard Setup
       
     </span>
   </a>
@@ -1456,10 +1406,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-defining-the-entities" class="md-nav__link">
+  <a href="#setup-with-private-network" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Defining the Entities
+        Setup with Private Network
       
     </span>
   </a>
@@ -1467,63 +1417,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-creating-the-appdbcontext-class" class="md-nav__link">
+  <a href="#downloading-a-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Creating the AppDbContext Class
+        Downloading a model
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-registering-in-dependency-injection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Registering in Dependency Injection
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-applying-migrations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Applying Migrations
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Applying Migrations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-the-initial-migration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Create the initial migration:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#apply-the-migration-to-the-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Apply the migration to the database:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1544,85 +1444,88 @@
 
 
 
-<h1 id="setting-up-dbcontext">Setting Up DbContext</h1>
-<p>The DbContext is the core class in Entity Framework Core (EF Core). It represents a session with the database and acts as a bridge between your domain entities and the database itself. It is responsible for querying, saving, and managing the entity objects during runtime.</p>
-<h2 id="1-required-packages">1. Required Packages</h2>
-<p>To get started, you need the core EF Core package, the design tools, and the data provider package for your specific database engine (e.g., PostgreSQL, SQL Server, SQLite).</p>
-<pre><code class="language-sh">dotnet add package Microsoft.EntityFrameworkCore
-dotnet add package Microsoft.EntityFrameworkCore.Design
-# Example provider: dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+<h1 id="docker-setup-for-ollama">Docker Setup For Ollama</h1>
+<h2 id="standard-setup">Standard Setup</h2>
+<pre><code class="language-yml">services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: always
+    ports:
+      - &quot;11434:11434&quot;
+    volumes:
+      - ollama_storage:/root/.ollama
+    # If you don't have an NVIDIA GPU, delete the 'deploy' section below
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    restart: always
+    ports:
+      - &quot;3000:8080&quot;
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    volumes:
+      - webui_storage:/app/backend/data
+    depends_on:
+      - ollama
+
+volumes:
+  ollama_storage:
+  webui_storage:
 </code></pre>
-<h2 id="2-defining-the-entities">2. Defining the Entities</h2>
-<p>Before configuring the context, you need the data models (entities) that will be mapped to your database tables.</p>
-<pre><code class="language-C#">namespace Infrastructure.Data.Models;
+<h2 id="setup-with-private-network">Setup with Private Network</h2>
+<pre><code class="language-yml">services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: always
+    ports:
+      - &quot;11434:11434&quot;
+    volumes:
+      - ollama_storage:/root/.ollama
+    networks:
+      - private_llm_net
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
 
-public class ExampleEntity
-{
-    public int Id { get; set; }
-    public string Name { get; set; } = string.Empty;
-    public DateTime CreatedAt { get; set; }
-}
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    restart: always
+    ports:
+      - &quot;3000:8080&quot;
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    volumes:
+      - webui_storage:/app/backend/data
+    networks:
+      - private_llm_net
+    depends_on:
+      - ollama
+
+networks:
+  private_llm_net:
+    internal: true  # This blocks all external internet traffic
 </code></pre>
-<h2 id="3-creating-the-appdbcontext-class">3. Creating the AppDbContext Class</h2>
-<p>Your custom context class must inherit from EF Core's base class. It exposes <code>DbSet&lt;TEntity&gt;</code> properties for each entity type you want to manage.</p>
-<pre><code class="language-C#">using Microsoft.EntityFrameworkCore;
-using Infrastructure.Data.Models;
-
-namespace Infrastructure.Data;
-
-public class AppDbContext(DbContextOptions&lt;AppDbContext&gt; options) : DbContext(options);
-{
-    // Constructor accepting DbContextOptions, passing configuration to the base class. Uncomment if not using primary constructor
-    /*
-    public AppDbContext(DbContextOptions&lt;AppDbContext&gt; options) : base(options)
-    {
-    }
-    */
-    // DbSets represent the tables in the database
-    public DbSet&lt;ExampleEntity&gt; ExampleEntities =&gt; Set&lt;ExampleEntity&gt;();
-
-    // Optional: Override OnModelCreating to configure the database schema via the Fluent API
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-
-        // Example: Configuring a property constraint
-        modelBuilder.Entity&lt;ExampleEntity&gt;()
-            .Property(e =&gt; e.Name)
-            .IsRequired()
-            .HasMaxLength(100);
-    }
-}
-</code></pre>
-<h2 id="4-registering-in-dependency-injection">4. Registering in Dependency Injection</h2>
-<p>In a modern .NET Core web application, you register the context in your Program.cs file using Dependency Injection (DI). This allows the context to be injected into your controllers, services, or repositories.</p>
-<pre><code class="language-C#">using Microsoft.EntityFrameworkCore;
-using Infrastructure.Data;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Fetch the connection string from appsettings.json
-var connectionString = builder.Configuration.GetConnectionString(&quot;DefaultConnection&quot;);
-
-// Register the DbContext with your chosen database provider
-builder.Services.AddDbContext&lt;AppDbContext&gt;(options =&gt;
-    options.UseNpgsql(connectionString)); // Replace UseNpgsql with UseSqlServer, UseSqlite, etc. as needed
-
-var app = builder.Build();
-
-// ... middleware configuration ...
-
-app.Run();
-</code></pre>
-<h2 id="5-applying-migrations">5. Applying Migrations</h2>
-<p>Once the entities and the context are set up, use the EF Core tools via the .NET CLI to generate and apply the database schema.</p>
-<h4 id="create-the-initial-migration">Create the initial migration:</h4>
-<pre><code class="language-sh">dotnet ef migrations add InitialCreate
-
-dotnet ef migrations add InitialCreate -o Data/Migrations #With output directly specified
-</code></pre>
-<h4 id="apply-the-migration-to-the-database">Apply the migration to the database:</h4>
-<pre><code class="language-sh">dotnet ef database update
+<blockquote>
+<p>[!NOTE] 
+To download a model, the interal flag on the network needs to be set to false.</p>
+</blockquote>
+<h2 id="downloading-a-model">Downloading a model</h2>
+<pre><code class="language-bash">docker exec -it ollama ollama run gemma4
 </code></pre>
 
 
