@@ -2,62 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.gooddogdevelopment.com/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/AI/Ollama/DockerSetup/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Coding%20Standards/editorconfig/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/AutoApplyMigrations/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/DotNetDbContext/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/OverridingSaveChangesDbContext/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/QueryOptimization/</loc>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Middleware/GlobalErrorHandling/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Pipelines/GithubBuildAndTest/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Templates/Core10WPostgres/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/General/APIs/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/General/CodingArticles/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/General/WebResources/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Typescript/NestJS/BasicSetup/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Typescript/NestJS/Controllers/SwaggerAnnotations/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Typescript/NestJS/Controllers/SwaggerSetup/</loc>
-         <lastmod>2026-04-08</lastmod>
+         <lastmod>2026-04-20</lastmod>
     </url>
 </urlset>

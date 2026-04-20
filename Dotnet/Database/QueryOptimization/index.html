@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.gooddogdevelopment.com/Typescript/NestJS/Controllers/SwaggerAnnotations/">
+        <link rel="canonical" href="https://docs.gooddogdevelopment.com/Dotnet/Database/QueryOptimization/">
       
       
-        <link rel="prev" href="../../BasicSetup/">
+        <link rel="prev" href="../OverridingSaveChangesDbContext/">
       
       
-        <link rel="next" href="../SwaggerSetup/">
+        <link rel="next" href="../../Middleware/GlobalErrorHandling/">
       
       
         
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Swagger Controller Annotations - Markdown Alley</title>
+        <title>Query Optimization Using Entity Framework - Markdown Alley</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#swagger-controller-annotations" class="md-skip">
+        <a href="#query-optimization-using-entity-framework" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Markdown Alley" class="md-header__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
+    <a href="../../.." title="Markdown Alley" class="md-header__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Swagger Controller Annotations
+              Query Optimization Using Entity Framework
             
           </span>
         </div>
@@ -198,7 +198,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Markdown Alley" class="md-nav__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
+    <a href="../../.." title="Markdown Alley" class="md-nav__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -216,7 +216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -337,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../AI/Ollama/DockerSetup/" class="md-nav__link">
+      <a href="../../../AI/Ollama/DockerSetup/" class="md-nav__link">
         
   
   
@@ -377,18 +377,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -409,7 +411,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -474,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Dotnet/Coding%20Standards/editorconfig/" class="md-nav__link">
+      <a href="../../Coding%20Standards/editorconfig/" class="md-nav__link">
         
   
   
@@ -507,18 +509,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -539,7 +543,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -557,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Dotnet/Database/AutoApplyMigrations/" class="md-nav__link">
+      <a href="../AutoApplyMigrations/" class="md-nav__link">
         
   
   
@@ -585,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Dotnet/Database/DotNetDbContext/" class="md-nav__link">
+      <a href="../DotNetDbContext/" class="md-nav__link">
         
   
   
@@ -613,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Dotnet/Database/OverridingSaveChangesDbContext/" class="md-nav__link">
+      <a href="../OverridingSaveChangesDbContext/" class="md-nav__link">
         
   
   
@@ -638,10 +642,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../Dotnet/Database/QueryOptimization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query Optimization Using Entity Framework
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -657,6 +688,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#only-select-the-fields-you-need-using-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Only select the fields you need using .Select()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoid-queries-in-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avoid Queries in Loops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-notracking-for-readonly-queries-optimizes-memory-and-cpu-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use NoTracking for readonly queries. Optimizes memory and CPU usage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-split-query-when-joining-multiple-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Split query when joining multiple tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -724,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Dotnet/Middleware/GlobalErrorHandling/" class="md-nav__link">
+      <a href="../../Middleware/GlobalErrorHandling/" class="md-nav__link">
         
   
   
@@ -807,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Dotnet/Pipelines/GithubBuildAndTest/" class="md-nav__link">
+      <a href="../../Pipelines/GithubBuildAndTest/" class="md-nav__link">
         
   
   
@@ -890,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Dotnet/Templates/Core10WPostgres/" class="md-nav__link">
+      <a href="../../Templates/Core10WPostgres/" class="md-nav__link">
         
   
   
@@ -980,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../General/APIs/" class="md-nav__link">
+      <a href="../../../General/APIs/" class="md-nav__link">
         
   
   
@@ -1008,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../General/CodingArticles/" class="md-nav__link">
+      <a href="../../../General/CodingArticles/" class="md-nav__link">
         
   
   
@@ -1036,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../General/WebResources/" class="md-nav__link">
+      <a href="../../../General/WebResources/" class="md-nav__link">
         
   
   
@@ -1068,20 +1163,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1102,7 +1195,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1117,20 +1210,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -1151,7 +1242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1169,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BasicSetup/" class="md-nav__link">
+      <a href="../../../Typescript/NestJS/BasicSetup/" class="md-nav__link">
         
   
   
@@ -1194,20 +1285,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
         
           
           <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
@@ -1228,7 +1317,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1243,37 +1332,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Swagger Controller Annotations
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Typescript/NestJS/Controllers/SwaggerAnnotations/" class="md-nav__link">
         
   
   
@@ -1289,70 +1351,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tags" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tags
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#controller-name" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Controller Name
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-auth" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        API Auth
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#response-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Response Types
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1365,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SwaggerSetup/" class="md-nav__link">
+      <a href="../../../Typescript/NestJS/Controllers/SwaggerSetup/" class="md-nav__link">
         
   
   
@@ -1436,10 +1434,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tags" class="md-nav__link">
+  <a href="#only-select-the-fields-you-need-using-select" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tags
+        Only select the fields you need using .Select()
       
     </span>
   </a>
@@ -1447,10 +1445,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controller-name" class="md-nav__link">
+  <a href="#avoid-queries-in-loops" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controller Name
+        Avoid Queries in Loops
       
     </span>
   </a>
@@ -1458,10 +1456,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-auth" class="md-nav__link">
+  <a href="#use-notracking-for-readonly-queries-optimizes-memory-and-cpu-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        API Auth
+        Use NoTracking for readonly queries. Optimizes memory and CPU usage
       
     </span>
   </a>
@@ -1469,10 +1467,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#response-types" class="md-nav__link">
+  <a href="#use-split-query-when-joining-multiple-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Response Types
+        Use Split query when joining multiple tables
       
     </span>
   </a>
@@ -1496,23 +1494,39 @@
 
 
 
-<h1 id="swagger-controller-annotations">Swagger Controller Annotations</h1>
-<h2 id="tags">Tags</h2>
-<p>Define a specific tag for a controller:</p>
-<pre><code class="language-ts">@ApiTags('prompts')
+<h1 id="query-optimization-using-entity-framework">Query Optimization Using Entity Framework</h1>
+<h3 id="only-select-the-fields-you-need-using-select">Only select the fields you need using <code>.Select()</code></h3>
+<pre><code class="language-csharp">// AVOID: Pulls all columns
+var user = await context.Users.FirstAsync(u =&gt; u.Id == id);
+
+// Pulls only what is needed
+var user = await context.Users
+    .Where(u =&gt; u.Id == id)
+    .Select(u =&gt; new { u.Username, u.Email })
+    .FirstAsync();
 </code></pre>
-<h2 id="controller-name">Controller Name</h2>
-<p>Define a specific name for a controller:</p>
-<pre><code class="language-ts">@Controller('prompts')
+<h3 id="avoid-queries-in-loops">Avoid Queries in Loops</h3>
+<pre><code class="language-csharp">// Avoid
+var blogs = context.Blogs.ToList();
+foreach (var blog in blogs) {
+    var count = blog.Posts.Count(); 
+}
+
+// Uses include instead of looping through the blogs
+var blogs = context.Blogs.Include(b =&gt; b.Posts).ToList();
 </code></pre>
-<h2 id="api-auth">API Auth</h2>
-<p>Define the authentication type:</p>
-<pre><code class="language-ts">@ApiBearerAuth('auth-name')
+<h3 id="use-notracking-for-readonly-queries-optimizes-memory-and-cpu-usage">Use NoTracking for readonly queries. Optimizes memory and CPU usage</h3>
+<pre><code class="language-csharp">var report = await context.Products
+    .AsNoTracking()
+    .Where(p =&gt; p.InStock)
+    .ToListAsync();
 </code></pre>
-<h2 id="response-types">Response Types</h2>
-<p>Specify the response types:</p>
-<pre><code class="language-ts">@ApiResponse({ status: 201, description: 'The record has been successfully created.'})
-@ApiResponse({ status: 403, description: 'Forbidden.'})
+<h3 id="use-split-query-when-joining-multiple-tables">Use Split query when joining multiple tables</h3>
+<pre><code class="language-csharp">var store = await context.Stores
+    .Include(s =&gt; s.Products)
+    .Include(s =&gt; s.Employees)
+    .AsSplitQuery() 
+    .FirstOrDefaultAsync(s =&gt; s.Id == id);
 </code></pre>
 
 
@@ -1565,10 +1579,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
