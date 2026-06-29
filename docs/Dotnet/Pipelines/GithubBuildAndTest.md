@@ -1,6 +1,17 @@
 # Example for Github Action Deploy Pipeline
 This is an example of how to configure a git repo to build, restore and test a project when changes are pushed to it. Create a .github\workflows folder and place the build.yml file in it. 
 
+## Step Overview
+
+| Step | What it does |
+|------|-------------|
+| **Checkout** | Clones the repository into the runner so subsequent steps have access to the source code. |
+| **Setup .NET** | Installs the specified .NET SDK version on the runner. |
+| **Restore dependencies** | Runs `dotnet restore` to download all NuGet packages defined in the solution. |
+| **Build** | Compiles the solution in Release configuration, skipping restore since it already ran. |
+| **Test** | Runs all test projects in Release mode without rebuilding, and writes results to a `.trx` file. |
+| **Upload test results** | Uploads the `.trx` file as a workflow artifact so results are accessible in the GitHub Actions UI. Runs even if tests fail (`if: always()`). |
+
 ```yml
 name: Build & Test
 
