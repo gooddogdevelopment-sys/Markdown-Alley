@@ -1,5 +1,7 @@
 # Global Error Handling
 
+A centralized ASP.NET Core middleware that catches all unhandled exceptions and returns consistent [RFC 7807](https://www.rfc-editor.org/rfc/rfc7807) `ProblemDetails` responses. Instead of scattering try/catch blocks across controllers, this single handler logs the exception and maps known exception types to appropriate HTTP status codes (400, 401, 404), falling back to 500 for anything unexpected. A `traceId` is included in every error response for easy correlation with logs.
+
 ```csharp
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
