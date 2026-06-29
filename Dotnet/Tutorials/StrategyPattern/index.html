@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.gooddogdevelopment.com/Dotnet/Templates/Core10WPostgres/">
+        <link rel="canonical" href="https://docs.gooddogdevelopment.com/Dotnet/Tutorials/StrategyPattern/">
       
       
-        <link rel="prev" href="../../Middleware/GlobalErrorHandling/">
+        <link rel="prev" href="../../Templates/Core10WPostgres/">
       
       
-        <link rel="next" href="../../Tutorials/StrategyPattern/">
+        <link rel="next" href="../../../General/APIs/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>.NET 10 Core API with PostgreSQL Template - Markdown Alley</title>
+        <title>Strategy Pattern — AI Content Generator - Markdown Alley</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-10-core-api-with-postgresql-template" class="md-skip">
+        <a href="#strategy-pattern-ai-content-generator" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              .NET 10 Core API with PostgreSQL Template
+              Strategy Pattern — AI Content Generator
             
           </span>
         </div>
@@ -925,20 +925,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
           <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
@@ -959,12 +957,97 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             
   
     Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Templates/Core10WPostgres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    .NET 10 Core API with PostgreSQL Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
   
 
           </label>
@@ -993,7 +1076,7 @@
   <span class="md-ellipsis">
     
   
-    .NET 10 Core API with PostgreSQL Template
+    Strategy Pattern — AI Content Generator
   
 
     
@@ -1011,7 +1094,7 @@
   <span class="md-ellipsis">
     
   
-    .NET 10 Core API with PostgreSQL Template
+    Strategy Pattern — AI Content Generator
   
 
     
@@ -1037,10 +1120,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Prerequisites
       
     </span>
   </a>
@@ -1059,10 +1142,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nuget-dependencies" class="md-nav__link">
+  <a href="#nuget-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        NuGet Dependencies
+        NuGet Packages
       
     </span>
   </a>
@@ -1070,22 +1153,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logging" class="md-nav__link">
+  <a href="#step-1-define-the-strategy-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logging
+        Step 1 — Define the Strategy Interface
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Logging">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-implement-the-concrete-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Implement the Concrete Strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2 — Implement the Concrete Strategies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#http-request-logging" class="md-nav__link">
+  <a href="#openai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        HTTP Request Logging
+        OpenAI
       
     </span>
   </a>
@@ -1093,10 +1187,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extending-logging" class="md-nav__link">
+  <a href="#gemini" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Extending Logging
+        Gemini
       
     </span>
   </a>
@@ -1109,22 +1203,66 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dbcontext-configuration" class="md-nav__link">
+  <a href="#step-3-create-the-context-contentservice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DbContext Configuration
+        Step 3 — Create the Context (ContentService)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="DbContext Configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-register-services-in-programcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Register Services in Program.cs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-add-the-request-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Add the Request Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-add-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — Add the Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7 — Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7 — Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#registration" class="md-nav__link">
+  <a href="#local-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Registration
+        Local Development
       
     </span>
   </a>
@@ -1132,144 +1270,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#appdbcontext" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        AppDbContext
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#automatic-timestamp-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automatic Timestamp Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#baseentity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        BaseEntity
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#swagger-openapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Swagger / OpenAPI
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Swagger / OpenAPI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#registration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Registration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#middleware" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Middleware
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accessing-the-docs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Accessing the Docs
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#global-exception-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Global Exception Handling
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Global Exception Handling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#registration_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Registration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Behavior
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ping-health-check-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ping / Health Check Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#docker" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1278,14 +1278,30 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Docker">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the Project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the Project">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
+  <a href="#local" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dockerfile
+        Local
       
     </span>
   </a>
@@ -1293,10 +1309,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
+  <a href="#docker_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Docker Compose
+        Docker
       
     </span>
   </a>
@@ -1309,63 +1325,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-actions-ci-pipeline" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GitHub Actions CI Pipeline
+        Usage
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-development-without-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Development (without Docker)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-migrations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running Migrations
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-as-a-template" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using as a Template
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1373,89 +1339,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorials
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tutorials
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Tutorials/StrategyPattern/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Strategy Pattern — AI Content Generator
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -2055,10 +1938,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Prerequisites
       
     </span>
   </a>
@@ -2077,10 +1960,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nuget-dependencies" class="md-nav__link">
+  <a href="#nuget-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        NuGet Dependencies
+        NuGet Packages
       
     </span>
   </a>
@@ -2088,22 +1971,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logging" class="md-nav__link">
+  <a href="#step-1-define-the-strategy-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logging
+        Step 1 — Define the Strategy Interface
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Logging">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-implement-the-concrete-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Implement the Concrete Strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2 — Implement the Concrete Strategies">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#http-request-logging" class="md-nav__link">
+  <a href="#openai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        HTTP Request Logging
+        OpenAI
       
     </span>
   </a>
@@ -2111,10 +2005,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extending-logging" class="md-nav__link">
+  <a href="#gemini" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Extending Logging
+        Gemini
       
     </span>
   </a>
@@ -2127,22 +2021,66 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dbcontext-configuration" class="md-nav__link">
+  <a href="#step-3-create-the-context-contentservice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DbContext Configuration
+        Step 3 — Create the Context (ContentService)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="DbContext Configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-register-services-in-programcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Register Services in Program.cs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-add-the-request-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Add the Request Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-add-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — Add the Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7 — Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7 — Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#registration" class="md-nav__link">
+  <a href="#local-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Registration
+        Local Development
       
     </span>
   </a>
@@ -2150,144 +2088,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#appdbcontext" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        AppDbContext
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#automatic-timestamp-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Automatic Timestamp Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#baseentity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        BaseEntity
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#swagger-openapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Swagger / OpenAPI
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Swagger / OpenAPI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#registration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Registration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#middleware" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Middleware
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accessing-the-docs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Accessing the Docs
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#global-exception-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Global Exception Handling
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Global Exception Handling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#registration_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Registration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Behavior
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ping-health-check-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ping / Health Check Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#docker" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2296,14 +2096,30 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Docker">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the Project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the Project">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dockerfile" class="md-nav__link">
+  <a href="#local" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dockerfile
+        Local
       
     </span>
   </a>
@@ -2311,10 +2127,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
+  <a href="#docker_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Docker Compose
+        Docker
       
     </span>
   </a>
@@ -2327,63 +2143,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-actions-ci-pipeline" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GitHub Actions CI Pipeline
+        Usage
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-development-without-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Development (without Docker)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-migrations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running Migrations
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-as-a-template" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using as a Template
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2404,352 +2170,251 @@
 
 
 
-<h1 id="net-10-core-api-with-postgresql-template">.NET 10 Core API with PostgreSQL Template</h1>
-<h2 id="overview">Overview</h2>
-<p>This is a production-ready .NET 10 Web API template pre-configured with PostgreSQL via Entity Framework Core. It is designed to serve as a clean, opinionated starting point for new API projects, eliminating boilerplate setup so you can focus on building features immediately.</p>
-<p><strong>Target Framework:</strong> .NET 10
-<strong>Database:</strong> PostgreSQL (via Npgsql EF Core provider)
-<strong>Repository:</strong> <code>dotnet-core-api-w-postgres</code></p>
-<p>The template bundles the following capabilities out of the box:</p>
+<h1 id="strategy-pattern-ai-content-generator">Strategy Pattern — AI Content Generator</h1>
+<p>The <strong>Strategy Pattern</strong> defines a family of algorithms, encapsulates each one, and makes them interchangeable — letting the caller swap behaviour at runtime without changing the code that uses it. This tutorial builds a .NET 10 Web API that uses the pattern to switch between <strong>OpenAI</strong> and <strong>Google Gemini</strong> as AI content generation backends. The calling code never knows (or cares) which provider it's talking to.</p>
+<p><strong>What you'll build:</strong> A <code>/api/AiContentGen/generate</code> endpoint that accepts a prompt and a provider name, routes to the correct LLM, and returns the generated text.</p>
+<hr />
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Structured logging with <strong>Serilog</strong></li>
-<li>PostgreSQL database access via <strong>Entity Framework Core 10</strong></li>
-<li>API documentation via <strong>Swagger (Swashbuckle)</strong> and the native <strong>OpenAPI</strong> endpoint</li>
-<li>Global exception handling following <strong>RFC 9457 Problem Details</strong></li>
-<li>A <code>BaseEntity</code> model with automatic <code>CreatedAt</code>/<code>UpdatedAt</code> timestamp management</li>
-<li>Docker and Docker Compose support</li>
-<li>A GitHub Actions CI pipeline</li>
+<li><a href="https://dotnet.microsoft.com/download">.NET 10 SDK</a></li>
+<li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a></li>
+<li>An API key for at least one provider:<ul>
+<li><strong>OpenAI</strong> → https://platform.openai.com/api-keys</li>
+<li><strong>Gemini</strong> → https://aistudio.google.com/apikey</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="project-structure">Project Structure</h2>
-<pre><code>dotnet-core-api-w-postgres/
-├── .github/
-│   └── workflows/
-│       └── build.yml              # CI pipeline
-├── dotnet-core-api-w-postgres/
+<pre><code>strategy-patterns/
+├── strategy-patterns/
 │   ├── Controllers/
-│   │   └── PingController.cs      # Health check endpoint
-│   ├── Data/
-│   │   └── AppDbContext.cs        # EF Core DbContext
+│   │   └── AiContentGenController.cs
 │   ├── Middleware/
 │   │   └── GlobalExceptionHandler.cs
 │   ├── Models/
-│   │   └── BaseEntity.cs          # Base model with audit fields
-│   ├── Properties/
-│   │   └── launchSettings.json
+│   │   └── GenerateContentRequest.cs
+│   ├── Services/
+│   │   ├── IAiContentGenerator.cs   ← the strategy interface
+│   │   ├── OpenAiGenerator.cs       ← concrete strategy
+│   │   ├── GeminiGenerator.cs       ← concrete strategy
+│   │   └── ContentService.cs        ← resolves and calls the active strategy
 │   ├── appsettings.json
 │   ├── appsettings.Development.json
 │   ├── Dockerfile
-│   └── Program.cs                 # Application entry point &amp; service registration
-├── compose.yaml                   # Docker Compose for local development
-└── dotnet-core-api-w-postgres.sln
+│   └── Program.cs
+├── compose.yaml
+└── .env.example
 </code></pre>
 <hr />
-<h2 id="nuget-dependencies">NuGet Dependencies</h2>
-<table>
-<thead>
-<tr>
-<th>Package</th>
-<th>Version</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Microsoft.AspNetCore.OpenApi</code></td>
-<td>10.0.2</td>
-<td>Native OpenAPI endpoint (<code>/openapi/v1.json</code>)</td>
-</tr>
-<tr>
-<td><code>Microsoft.EntityFrameworkCore.Design</code></td>
-<td>10.0.5</td>
-<td>EF Core tooling (migrations, scaffolding)</td>
-</tr>
-<tr>
-<td><code>Npgsql.EntityFrameworkCore.PostgreSQL</code></td>
-<td>10.0.1</td>
-<td>PostgreSQL EF Core provider</td>
-</tr>
-<tr>
-<td><code>Serilog.AspNetCore</code></td>
-<td>10.0.0</td>
-<td>Structured logging + HTTP request logging</td>
-</tr>
-<tr>
-<td><code>Swashbuckle.AspNetCore</code></td>
-<td>10.1.5</td>
-<td>Swagger UI and Swagger JSON generation</td>
-</tr>
-</tbody>
-</table>
+<h2 id="nuget-packages">NuGet Packages</h2>
+<pre><code class="language-bash">dotnet add package Google.GenAI
+dotnet add package Microsoft.AspNetCore.OpenApi
+dotnet add package Microsoft.Extensions.AI
+dotnet add package Microsoft.Extensions.AI.OpenAI
+</code></pre>
 <hr />
-<h2 id="logging">Logging</h2>
-<p>Logging is handled by <strong>Serilog</strong>, configured directly in <code>Program.cs</code> before the application builder is built. This ensures that any startup errors are captured by the logger.</p>
-<pre><code class="language-csharp">Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Information()
-    .WriteTo.Console()
-    .Enrich.FromLogContext()
-    .CreateLogger();
+<h2 id="step-1-define-the-strategy-interface">Step 1 — Define the Strategy Interface</h2>
+<p>The interface is the contract that every strategy must fulfil. <code>ContentService</code> and the controller only ever depend on this — never on a concrete provider.</p>
+<pre><code class="language-csharp">// Services/IAiContentGenerator.cs
+namespace strategy_patterns.Services;
 
-builder.Host.UseSerilog();
-</code></pre>
-<p>The logger is configured with:</p>
-<ul>
-<li><strong>Minimum level:</strong> <code>Information</code> — debug-level noise is suppressed in all environments by default.</li>
-<li><strong>Console sink:</strong> All log output goes to stdout, making it compatible with Docker and cloud log aggregators.</li>
-<li><strong>Log context enrichment:</strong> Properties pushed onto the <code>LogContext</code> (e.g., correlation IDs, user identifiers) are automatically included in every log event within that context scope.</li>
-</ul>
-<h3 id="http-request-logging">HTTP Request Logging</h3>
-<p>After the app is built, Serilog's request logging middleware is registered:</p>
-<pre><code class="language-csharp">app.UseSerilogRequestLogging();
-</code></pre>
-<p>This replaces ASP.NET Core's default per-request log output with a single, structured Serilog log event per request, including method, path, status code, and elapsed time. This middleware is optional and can be removed if the default ASP.NET Core request logging is preferred.</p>
-<h3 id="extending-logging">Extending Logging</h3>
-<p>To add additional sinks (e.g., file, Seq, Application Insights), extend the <code>LoggerConfiguration</code> chain in <code>Program.cs</code>:</p>
-<pre><code class="language-csharp">Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Information()
-    .WriteTo.Console()
-    .WriteTo.File(&quot;logs/log-.txt&quot;, rollingInterval: RollingInterval.Day) // example
-    .Enrich.FromLogContext()
-    .CreateLogger();
+public interface IAiContentGenerator
+{
+    Task&lt;string&gt; GenerateTextAsync(string prompt, string modelId);
+}
 </code></pre>
 <hr />
-<h2 id="dbcontext-configuration">DbContext Configuration</h2>
-<h3 id="registration">Registration</h3>
-<p>The <code>AppDbContext</code> is registered in <code>Program.cs</code> using the <code>Default</code> connection string from configuration:</p>
-<pre><code class="language-csharp">builder.Services.AddDbContext&lt;AppDbContext&gt;(opts =&gt;
-    opts.UseNpgsql(builder.Configuration.GetConnectionString(&quot;Default&quot;)));
+<h2 id="step-2-implement-the-concrete-strategies">Step 2 — Implement the Concrete Strategies</h2>
+<p>Each class calls its own SDK directly. This is the point of the pattern: two completely different API shapes hidden behind the same interface.</p>
+<h3 id="openai">OpenAI</h3>
+<pre><code class="language-csharp">// Services/OpenAiGenerator.cs
+using OpenAI.Chat;
+
+namespace strategy_patterns.Services;
+
+public class OpenAiGenerator(string apiKey) : IAiContentGenerator
+{
+    public async Task&lt;string&gt; GenerateTextAsync(string prompt, string modelId)
+    {
+        var client = new ChatClient(modelId, apiKey);
+        var response = await client.CompleteChatAsync(prompt);
+        return response.Value.Content[0].Text;
+    }
+}
 </code></pre>
-<p>The connection string should be added to <code>appsettings.json</code> (or via an environment variable / secrets manager in production):</p>
+<h3 id="gemini">Gemini</h3>
+<pre><code class="language-csharp">// Services/GeminiGenerator.cs
+using Google.GenAI;
+
+namespace strategy_patterns.Services;
+
+public class GeminiGenerator(string apiKey) : IAiContentGenerator
+{
+    public async Task&lt;string&gt; GenerateTextAsync(string prompt, string modelId)
+    {
+        var client = new Client(apiKey: apiKey);
+        var response = await client.Models.GenerateContentAsync(modelId, prompt);
+        return response.Text!;
+    }
+}
+</code></pre>
+<hr />
+<h2 id="step-3-create-the-context-contentservice">Step 3 — Create the Context (ContentService)</h2>
+<p><code>ContentService</code> is the <em>context</em> in strategy pattern terms. It holds no provider logic — it just resolves the right strategy by key and delegates to it.</p>
+<p>Keyed DI (<code>GetKeyedService</code>) lets multiple implementations of the same interface coexist in the container, distinguished by a string key.</p>
+<pre><code class="language-csharp">// Services/ContentService.cs
+namespace strategy_patterns.Services;
+
+public interface IContentService
+{
+    Task&lt;string&gt; CreatePostAsync(string prompt, string providerName, string modelId);
+}
+
+public class ContentService(IServiceProvider serviceProvider, ILogger&lt;ContentService&gt; logger) : IContentService
+{
+    public async Task&lt;string&gt; CreatePostAsync(string prompt, string providerName, string modelId)
+    {
+        var generator = serviceProvider.GetKeyedService&lt;IAiContentGenerator&gt;(providerName);
+
+        if (generator != null) return await generator.GenerateTextAsync(prompt, modelId);
+
+        logger.LogError(&quot;The AI provider is not supported: '{providerName}'&quot;, providerName);
+        throw new ArgumentException($&quot;AI Provider '{providerName}' is not supported.&quot;);
+    }
+}
+</code></pre>
+<hr />
+<h2 id="step-4-register-services-in-programcs">Step 4 — Register Services in Program.cs</h2>
+<p>Each strategy is registered as a <strong>keyed scoped service</strong>. The factory lambda reads the API key from configuration and constructs the generator — failing fast with <code>ArgumentException.ThrowIfNullOrWhiteSpace</code> if the key is missing.</p>
+<pre><code class="language-csharp">using strategy_patterns.Services;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddExceptionHandler&lt;GlobalExceptionHandler&gt;();
+builder.Services.AddProblemDetails();
+builder.Services.AddControllers();
+builder.Services.AddOpenApi();
+
+builder.Services.AddKeyedScoped&lt;IAiContentGenerator, OpenAiGenerator&gt;(&quot;OpenAI&quot;, (provider, _) =&gt;
+{
+    var config = provider.GetRequiredService&lt;IConfiguration&gt;();
+    var apiKey = config[&quot;OpenAI:ApiKey&quot;];
+    ArgumentException.ThrowIfNullOrWhiteSpace(apiKey, &quot;OpenAI:ApiKey&quot;);
+    return new OpenAiGenerator(apiKey);
+});
+
+builder.Services.AddKeyedScoped&lt;IAiContentGenerator, GeminiGenerator&gt;(&quot;Gemini&quot;, (provider, _) =&gt;
+{
+    var config = provider.GetRequiredService&lt;IConfiguration&gt;();
+    var apiKey = config[&quot;Gemini:ApiKey&quot;];
+    ArgumentException.ThrowIfNullOrWhiteSpace(apiKey, &quot;Gemini:ApiKey&quot;);
+    return new GeminiGenerator(apiKey);
+});
+
+builder.Services.AddScoped&lt;IContentService, ContentService&gt;();
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+    app.MapOpenApi();
+
+app.UseAuthorization();
+app.MapControllers();
+app.Run();
+</code></pre>
+<hr />
+<h2 id="step-5-add-the-request-model">Step 5 — Add the Request Model</h2>
+<pre><code class="language-csharp">// Models/GenerateContentRequest.cs
+namespace strategy_patterns.Models;
+
+public record GenerateContentRequest(
+    string Prompt,
+    string ProviderName,  // &quot;OpenAI&quot; or &quot;Gemini&quot;
+    string ModelId
+);
+</code></pre>
+<hr />
+<h2 id="step-6-add-the-controller">Step 6 — Add the Controller</h2>
+<p>The controller passes <code>ProviderName</code> directly to <code>ContentService</code>, which resolves the correct strategy. The controller itself has no awareness of which provider is being used.</p>
+<pre><code class="language-csharp">// Controllers/AiContentGenController.cs
+using Microsoft.AspNetCore.Mvc;
+using strategy_patterns.Models;
+using strategy_patterns.Services;
+
+namespace strategy_patterns.Controllers;
+
+[ApiController]
+[Route(&quot;api/[controller]&quot;)]
+public class AiContentGenController(IContentService contentService) : ControllerBase
+{
+    [HttpPost(&quot;generate&quot;)]
+    public async Task&lt;IActionResult&gt; Generate([FromBody] GenerateContentRequest request)
+    {
+        var result = await contentService.CreatePostAsync(request.Prompt, request.ProviderName, request.ModelId);
+        return Ok(new { Content = result });
+    }
+}
+</code></pre>
+<hr />
+<h2 id="step-7-configuration">Step 7 — Configuration</h2>
+<h3 id="local-development">Local Development</h3>
+<p>Add keys to <code>appsettings.Development.json</code> (do not commit this file if it contains real keys):</p>
 <pre><code class="language-json">{
-  &quot;ConnectionStrings&quot;: {
-    &quot;Default&quot;: &quot;Host=localhost;Database=dotnet_api_db;Username=postgres;Password=postgres&quot;
+  &quot;OpenAI&quot;: {
+    &quot;ApiKey&quot;: &quot;your-openai-key&quot;
+  },
+  &quot;Gemini&quot;: {
+    &quot;ApiKey&quot;: &quot;your-gemini-key&quot;
   }
 }
 </code></pre>
-<p>When running via Docker Compose the connection string is injected through the environment variable <code>ConnectionStrings__Default</code> (note the double underscore — ASP.NET Core's configuration system maps this to the <code>ConnectionStrings:Default</code> key, matching the <code>"Default"</code> key used in <code>GetConnectionString("Default")</code>).</p>
-<blockquote>
-<p><strong>Note:</strong> The <code>compose.yaml</code> in this template uses <code>ConnectionStrings__DefaultConnection</code>, which would map to the key <code>"DefaultConnection"</code> — a mismatch with the <code>"Default"</code> key expected by <code>Program.cs</code>. If you use Docker Compose and find the API cannot connect to the database, update the environment variable in <code>compose.yaml</code> from <code>ConnectionStrings__DefaultConnection</code> to <code>ConnectionStrings__Default</code>.</p>
-</blockquote>
-<h3 id="appdbcontext">AppDbContext</h3>
-<p><code>AppDbContext</code> extends <code>DbContext</code> and uses the primary constructor pattern introduced in C# 12:</p>
-<pre><code class="language-csharp">public class AppDbContext(DbContextOptions&lt;AppDbContext&gt; options) : DbContext(options)
+<h3 id="docker">Docker</h3>
+<p>Create a <code>.env</code> file from the provided example:</p>
+<pre><code class="language-bash">cp .env.example .env
 </code></pre>
-<p><strong>Entity configurations</strong> are loaded automatically via <code>OnModelCreating</code>:</p>
-<pre><code class="language-csharp">modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+<pre><code class="language-env">OPENAI_API_KEY=your-openai-key
+GEMINI_API_KEY=your-gemini-key
 </code></pre>
-<p>Any class implementing <code>IEntityTypeConfiguration&lt;T&gt;</code> in the assembly will be discovered and applied automatically. This keeps entity configuration out of <code>AppDbContext</code> and in dedicated, per-entity configuration classes.</p>
-<p><strong>Adding new entities</strong> — uncomment or add a <code>DbSet</code> property following the pattern shown in the placeholder comment:</p>
-<pre><code class="language-csharp">public DbSet&lt;MyEntity&gt; MyEntities =&gt; Set&lt;MyEntity&gt;();
-</code></pre>
-<h3 id="automatic-timestamp-management">Automatic Timestamp Management</h3>
-<p><code>SaveChangesAsync</code> is overridden to automatically manage <code>CreatedAt</code> and <code>UpdatedAt</code> on any entity that inherits from <code>BaseEntity</code>:</p>
-<pre><code class="language-csharp">public override Task&lt;int&gt; SaveChangesAsync(CancellationToken ct = default)
-{
-    var now = DateTime.UtcNow;
-
-    foreach (var entry in ChangeTracker.Entries&lt;BaseEntity&gt;())
-    {
-        switch (entry.State)
-        {
-            case EntityState.Added:
-                entry.Entity.CreatedAt = now;
-                entry.Entity.UpdatedAt = now;
-                break;
-            case EntityState.Modified:
-                entry.Entity.UpdatedAt = now;
-                entry.Property(e =&gt; e.CreatedAt).IsModified = false; // prevents overwrite
-                break;
-        }
-    }
-
-    return base.SaveChangesAsync(ct);
-}
-</code></pre>
-<p>All timestamps are stored in <strong>UTC</strong>. On <code>Added</code>, both fields are set. On <code>Modified</code>, only <code>UpdatedAt</code> is set and <code>CreatedAt</code> is explicitly marked as unmodified to prevent accidental overwrites.</p>
-<h3 id="baseentity">BaseEntity</h3>
-<p>All domain entities should inherit from <code>BaseEntity</code> to get automatic audit field management:</p>
-<pre><code class="language-csharp">public abstract class BaseEntity
-{
-    [Key]
-    public int Id { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public DateTime UpdatedAt { get; set; }
-}
+<p>The <code>compose.yaml</code> maps these into the container as ASP.NET Core configuration environment variables (double underscore <code>__</code> maps to <code>:</code> in config keys):</p>
+<pre><code class="language-yaml">services:
+  strategy-patterns:
+    image: strategy-patterns
+    build:
+      context: .
+      dockerfile: strategy-patterns/Dockerfile
+    ports:
+      - &quot;8080:8080&quot;
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - OpenAI__ApiKey=${OPENAI_API_KEY}
+      - Gemini__ApiKey=${GEMINI_API_KEY}
 </code></pre>
 <hr />
-<h2 id="swagger-openapi">Swagger / OpenAPI</h2>
-<p>The template registers both <strong>Swashbuckle</strong> (for the Swagger UI) and the native <strong>ASP.NET Core OpenAPI</strong> endpoint.</p>
-<h3 id="registration_1">Registration</h3>
-<pre><code class="language-csharp">builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =&gt;
-{
-    c.SwaggerDoc(&quot;v1&quot;, new OpenApiInfo { Title = &quot;API Template&quot;, Version = &quot;v1&quot; });
-    c.AddSecurityDefinition(&quot;Bearer&quot;, new OpenApiSecurityScheme
-    {
-        Name = &quot;Authorization&quot;,
-        Type = SecuritySchemeType.ApiKey,
-        In = ParameterLocation.Header,
-        Description = &quot;JWT Authorization header using the Bearer scheme. Example: \&quot;Bearer {token}\&quot;&quot;
-    });
-});
-builder.Services.AddOpenApi();
+<h2 id="running-the-project">Running the Project</h2>
+<h3 id="local">Local</h3>
+<pre><code class="language-bash">cd strategy-patterns
+dotnet run
 </code></pre>
-<p>A Bearer token security definition is pre-registered in the Swagger UI, making it straightforward to test authenticated endpoints once authentication middleware is wired up.</p>
-<h3 id="middleware">Middleware</h3>
-<pre><code class="language-csharp">app.MapOpenApi();     // Native OpenAPI JSON: /openapi/v1.json
-app.UseSwagger();     // Swashbuckle JSON: /swagger/v1/swagger.json
-app.UseSwaggerUI();   // Swagger UI: /swagger/index.html
-</code></pre>
-<p>By default, the Swagger UI is available in <strong>all environments</strong>. If you want to restrict it to the development environment only, replace the above block with the commented-out version already present in <code>Program.cs</code>:</p>
-<pre><code class="language-csharp">if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-</code></pre>
-<h3 id="accessing-the-docs">Accessing the Docs</h3>
-<table>
-<thead>
-<tr>
-<th>URL</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>/swagger/index.html</code></td>
-<td>Swagger UI</td>
-</tr>
-<tr>
-<td><code>/swagger/v1/swagger.json</code></td>
-<td>Swashbuckle-generated OpenAPI JSON</td>
-</tr>
-<tr>
-<td><code>/openapi/v1.json</code></td>
-<td>Native ASP.NET Core OpenAPI JSON</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="global-exception-handling">Global Exception Handling</h2>
-<p>Unhandled exceptions are caught by <code>GlobalExceptionHandler</code>, which implements <code>IExceptionHandler</code> — the standard ASP.NET Core exception handling interface introduced in .NET 8.</p>
-<h3 id="registration_2">Registration</h3>
-<pre><code class="language-csharp">builder.Services.AddExceptionHandler&lt;GlobalExceptionHandler&gt;();
-builder.Services.AddProblemDetails();
-</code></pre>
-<h3 id="behavior">Behavior</h3>
-<p>The handler logs every unhandled exception at the <code>Error</code> level and returns a structured <strong>RFC 9457 Problem Details</strong> JSON response. Specific exception types are mapped to appropriate HTTP status codes:</p>
-<table>
-<thead>
-<tr>
-<th>Exception Type</th>
-<th>HTTP Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ArgumentException</code></td>
-<td>400 Bad Request</td>
-</tr>
-<tr>
-<td><code>KeyNotFoundException</code></td>
-<td>404 Not Found</td>
-</tr>
-<tr>
-<td><code>UnauthorizedAccessException</code></td>
-<td>401 Unauthorized</td>
-</tr>
-<tr>
-<td>All other exceptions</td>
-<td>500 Internal Server Error</td>
-</tr>
-</tbody>
-</table>
-<p>Every response includes the ASP.NET Core <code>TraceIdentifier</code> as an extension field (<code>traceId</code>), enabling correlation between client-facing error responses and server-side log entries.</p>
-<p><strong>Example response:</strong></p>
-<pre><code class="language-json">{
-  &quot;status&quot;: 404,
-  &quot;title&quot;: &quot;Not Found&quot;,
-  &quot;detail&quot;: &quot;The requested resource could not be found.&quot;,
-  &quot;traceId&quot;: &quot;00-abc123-def456-00&quot;
-}
-</code></pre>
-<p>To add new exception mappings, extend the <code>switch</code> expression in <code>GlobalExceptionHandler.TryHandleAsync</code>.</p>
-<hr />
-<h2 id="ping-health-check-endpoint">Ping / Health Check Endpoint</h2>
-<p>A <code>PingController</code> is included as a minimal health check:</p>
-<pre><code>GET /ping  →  200 OK  &quot;Pong&quot;
-</code></pre>
-<p>This is also the endpoint used by the Docker Compose health check for the API container.</p>
-<hr />
-<h2 id="docker">Docker</h2>
-<h3 id="dockerfile">Dockerfile</h3>
-<p>The <code>Dockerfile</code> uses a multi-stage build:</p>
-<ol>
-<li><strong>base</strong> — runtime image (<code>mcr.microsoft.com/dotnet/aspnet:10.0</code>), exposes ports <code>8080</code> and <code>8081</code>.</li>
-<li><strong>build</strong> — SDK image (<code>mcr.microsoft.com/dotnet/sdk:10.0</code>), restores and builds the project in Release configuration.</li>
-<li><strong>publish</strong> — publishes the build output.</li>
-<li><strong>final</strong> — copies the published output into the runtime image.</li>
-</ol>
-<p>The default target OS for Docker is <strong>Linux</strong> (set via <code>&lt;DockerDefaultTargetOS&gt;Linux&lt;/DockerDefaultTargetOS&gt;</code> in the <code>.csproj</code>).</p>
-<h3 id="docker-compose">Docker Compose</h3>
-<p><code>compose.yaml</code> defines a local development stack with two services:</p>
-<p><strong>postgres</strong> — PostgreSQL 16 with a persistent named volume (<code>postgres_data</code>) and a health check that polls <code>pg_isready</code>.</p>
-<p><strong>dotnet-core-api-w-postgres</strong> — The API container, which:
-- Builds from the local <code>Dockerfile</code>
-- Exposes ports <code>8080</code> (HTTP) and <code>8081</code> (HTTPS)
-- Injects the database connection string via environment variable
-- Depends on the <code>postgres</code> service being healthy before starting
-- Has its own health check that polls <code>GET /ping</code></p>
-<p>Both services run on a shared bridge network (<code>dotnet_network</code>).</p>
-<p><strong>To start the full stack locally:</strong></p>
+<p>API available at <code>http://localhost:5244</code>.</p>
+<h3 id="docker_1">Docker</h3>
 <pre><code class="language-bash">docker compose up --build
 </code></pre>
+<p>API available at <code>http://localhost:8080</code>.</p>
 <hr />
-<h2 id="github-actions-ci-pipeline">GitHub Actions CI Pipeline</h2>
-<p>The workflow defined in <code>.github/workflows/build.yml</code> runs on every push and pull request to <code>main</code>.</p>
-<p><strong>Steps:</strong></p>
-<ol>
-<li>Checkout the repository</li>
-<li>Set up .NET 10</li>
-<li>Restore NuGet dependencies</li>
-<li>Build the solution in Release configuration</li>
-<li>Run all tests and output results in TRX format</li>
-<li>Upload test results as a build artifact (always, even on failure)</li>
-</ol>
-<hr />
-<h2 id="getting-started">Getting Started</h2>
-<h3 id="local-development-without-docker">Local Development (without Docker)</h3>
-<ol>
-<li>Ensure you have the <a href="https://dotnet.microsoft.com/download">.NET 10 SDK</a> installed.</li>
-<li>Start a local PostgreSQL instance (or use the Docker Compose <code>postgres</code> service: <code>docker compose up postgres -d</code>).</li>
-<li>Add your connection string to <code>appsettings.Development.json</code>:</li>
-</ol>
+<h2 id="usage">Usage</h2>
+<p><code>POST /api/AiContentGen/generate</code></p>
 <pre><code class="language-json">{
-  &quot;ConnectionStrings&quot;: {
-    &quot;Default&quot;: &quot;Host=localhost;Database=dotnet_api_db;Username=postgres;Password=postgres&quot;
-  }
+  &quot;prompt&quot;: &quot;Write a short blog post about the strategy pattern in C#&quot;,
+  &quot;providerName&quot;: &quot;OpenAI&quot;,
+  &quot;modelId&quot;: &quot;gpt-4o&quot;
 }
 </code></pre>
-<ol>
-<li>Run the application:</li>
-</ol>
-<pre><code class="language-bash">dotnet run --project dotnet-core-api-w-postgres
+<p>Switch providers by changing <code>providerName</code> to <code>"Gemini"</code> and <code>modelId</code> to a Gemini model such as <code>"gemini-2.0-flash"</code>. No other change is needed.</p>
+<pre><code class="language-bash">curl -X POST http://localhost:8080/api/AiContentGen/generate \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;prompt&quot;: &quot;Explain the strategy pattern&quot;, &quot;providerName&quot;: &quot;Gemini&quot;, &quot;modelId&quot;: &quot;gemini-2.0-flash&quot;}'
 </code></pre>
-<ol>
-<li>Open the Swagger UI at <code>http://localhost:5109/swagger/index.html</code>.</li>
-</ol>
-<h3 id="running-migrations">Running Migrations</h3>
-<pre><code class="language-bash"># Add a new migration
-dotnet ef migrations add &lt;MigrationName&gt; --project dotnet-core-api-w-postgres
-
-# Apply migrations to the database
-dotnet ef database update --project dotnet-core-api-w-postgres
-</code></pre>
-<h3 id="using-as-a-template">Using as a Template</h3>
-<p>To use this as the base for a new project, clone the repository and do a global find-and-replace of <code>dotnet-core-api-w-postgres</code> and <code>dotnet_core_api_w_postgres</code> with your new project name. Update the <code>SwaggerDoc</code> title in <code>Program.cs</code> to reflect the new API name.</p>
 
 
 
