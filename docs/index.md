@@ -6,7 +6,7 @@ A personal knowledge base for development notes, references, and resources. Use 
 
 **[AI](AI/Ollama/DockerSetup.md)** — Docker setup guides for running local AI models and tooling.
 
-**[.NET](Dotnet/Database/DotNetDbContext.md)** — Coding standards, database patterns, middleware, CI/CD pipeline examples, and project templates for .NET projects.
+**[.NET](Dotnet/Database/DotNetDbContext.md)** — Coding standards, database patterns, middleware, CI/CD pipeline examples, project templates, and class fundamentals (including access modifiers) for .NET projects.
 
 **[TypeScript](Typescript/NestJS/BasicSetup.md)** — NestJS setup guides including Swagger configuration and controller annotations.
 
