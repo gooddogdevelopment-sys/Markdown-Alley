@@ -14,6 +14,7 @@ A personal collection of development documentation, notes, and resources. Built 
 
 ### .NET
 
+- [Access Modifiers](docs/Dotnet/Classes/AccessModifiers.md) — The six C# access modifiers (`public`, `private`, `protected`, `internal`, `protected internal`, `private protected`) with examples
 - [DbContext Setup](docs/Dotnet/Database/DotNetDbContext.md) — Setting up Entity Framework Core DbContext, dependency injection, and EF Core migrations
 - [Overriding SaveChanges](docs/Dotnet/Database/OverridingSaveChangesDbContext.md) — Automatically setting `CreatedAt`/`UpdatedAt` timestamps by overriding `SaveChangesAsync`
 - [Auto Apply Migrations](docs/Dotnet/Database/AutoApplyMigrations.md) — Automatically applying EF Core migrations on app startup using `MigrateAsync`
