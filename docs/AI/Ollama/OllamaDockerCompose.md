@@ -1,4 +1,9 @@
 # Docker Setup For Ollama
+
+Docker Compose setup for running Ollama with the Open WebUI frontend, with optional NVIDIA GPU support and a locked-down private network.
+
+Save either block below as `docker-compose.yml` and start it with `docker compose up -d`. Open WebUI is then available at `http://localhost:3000`.
+
 ## Standard Setup
 ```yml
 services:
@@ -79,7 +84,7 @@ networks:
 ```
 
 > **NOTE** 
-> To download a model, the interal flag on the network needs to be set to false.
+> To download a model, the `internal` flag on the network needs to be set to `false` (or removed) so the container can reach the internet.
 
 ## Downloading a model
 

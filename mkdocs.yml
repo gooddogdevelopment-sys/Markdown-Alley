@@ -25,7 +25,7 @@ extra:
 nav:
   - Home: index.md
   - AI:
-      - Ollama Docker Setup: AI/Ollama/DockerSetup.md
+      - Ollama Docker Setup: AI/Ollama/OllamaDockerCompose.md
   - .NET:
       - Classes:
           - Access Modifiers: Dotnet/Classes/AccessModifiers.md

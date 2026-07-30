@@ -10,7 +10,7 @@ A personal collection of development documentation, notes, and resources. Built 
 
 ### AI
 
-- [Ollama Docker Setup](docs/AI/Ollama/DockerSetup.md) — Docker Compose configuration for running Ollama with Open WebUI, including GPU support and private network options
+- [Ollama Docker Setup](docs/AI/Ollama/OllamaDockerCompose.md) — Docker Compose configuration for running Ollama with Open WebUI, including GPU support and private network options
 
 ### .NET
 

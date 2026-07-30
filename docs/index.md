@@ -4,7 +4,7 @@ A personal knowledge base for development notes, references, and resources. Use 
 
 ## What's Here
 
-**[AI](AI/Ollama/DockerSetup.md)** — Docker setup guides for running local AI models and tooling.
+**[AI](AI/Ollama/OllamaDockerCompose.md)** — Docker setup guides for running local AI models and tooling.
 
 **[.NET](Dotnet/Database/DotNetDbContext.md)** — Coding standards, database patterns, middleware, CI/CD pipeline examples, project templates, and class fundamentals (including access modifiers) for .NET projects.
 
