@@ -18,9 +18,9 @@ A personal collection of development documentation, notes, and resources. Built 
 - [Overriding SaveChanges](docs/Dotnet/Database/OverridingSaveChangesDbContext.md) — Automatically setting `CreatedAt`/`UpdatedAt` timestamps by overriding `SaveChangesAsync`
 - [Auto Apply Migrations](docs/Dotnet/Database/AutoApplyMigrations.md) — Automatically applying EF Core migrations on app startup using `MigrateAsync`
 - [Global Error Handling](docs/Dotnet/Middleware/GlobalErrorHandling.md) — Implementing global exception handling middleware in ASP.NET Core using `IExceptionHandler`
-- [GitHub Actions Build & Test](docs/Dotnet/Pipelines/GithubBuildAndTest.md) — Example GitHub Actions workflow to build, restore, and test a .NET project on push
+- [GitHub Actions Build & Test](docs/Dotnet/CI-CD/GithubBuildAndTest.md) — Example GitHub Actions workflow to build, restore, and test a .NET project on push
 - [.NET 10 Core API with PostgreSQL Template](docs/Dotnet/Templates/Core10WPostgres.md) — Production-ready .NET 10 Web API template pre-configured with PostgreSQL, Serilog, Swagger, and global exception handling
-- [EditorConfig Example](docs/Dotnet/Coding%20Standards/editorconfig.md) — Example `.editorconfig` for enforcing .NET coding standards
+- [EditorConfig Example](docs/Dotnet/Coding-Standards/editorconfig.md) — Example `.editorconfig` for enforcing .NET coding standards
 
 ### TypeScript
 
