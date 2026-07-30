@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#example-for-github-action-deploy-pipeline" class="md-skip">
+        <a href="#github-actions-build-test-workflow" class="md-skip">
           Skip to content
         </a>
       
@@ -816,10 +816,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
       
     </span>
   </a>
@@ -1678,10 +1711,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
       
     </span>
   </a>
@@ -1705,8 +1771,20 @@
 
 
 
-<h1 id="example-for-github-action-deploy-pipeline">Example for Github Action Deploy Pipeline</h1>
-<p>This is an example of how to configure a git repo to build, restore and test a project when changes are pushed to it. Create a .github\workflows folder and place the build.yml file in it. </p>
+<h1 id="github-actions-build-test-workflow">GitHub Actions Build &amp; Test Workflow</h1>
+<p>A GitHub Actions workflow that restores, builds, and tests a .NET solution on every push and pull request to <code>main</code>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A .NET solution (<code>.sln</code>) with at least one test project, hosted in a GitHub repository.</li>
+<li>Push access to the repository so you can add workflow files and trigger runs.</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<ol>
+<li>In the repository root, create a <code>.github/workflows</code> folder if it doesn't already exist.</li>
+<li>Add a <code>build.yml</code> file to that folder with the workflow below. Replace <code>your-project.sln</code> with your own solution file name, and set <code>dotnet-version</code> to the SDK version your project targets.</li>
+<li>Commit and push the file (or open a pull request) against <code>main</code>.</li>
+<li>Verify the run: open the repository's <strong>Actions</strong> tab, confirm the <strong>Build &amp; Test</strong> workflow succeeds, and download the <code>test-results</code> artifact from the run summary to inspect the <code>.trx</code> output.</li>
+</ol>
 <h2 id="step-overview">Step Overview</h2>
 <table>
 <thead>
@@ -1765,13 +1843,13 @@ jobs:
           dotnet-version: &quot;10.x&quot;
 
       - name: Restore dependencies
-        run: dotnet restore newsletter-api.sln
+        run: dotnet restore your-project.sln
 
       - name: Build
-        run: dotnet build newsletter-api.sln --no-restore --configuration Release
+        run: dotnet build your-project.sln --no-restore --configuration Release
 
       - name: Test
-        run: dotnet test newsletter-api.sln --no-build --configuration Release --logger &quot;trx;LogFileName=test-results.trx&quot;
+        run: dotnet test your-project.sln --no-build --configuration Release --logger &quot;trx;LogFileName=test-results.trx&quot;
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -1780,6 +1858,10 @@ jobs:
           name: test-results
           path: &quot;**/*.trx&quot;
 </code></pre>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../../Templates/Core10WPostgres/">.NET 10 Core API with PostgreSQL Template</a> — ships with a GitHub Actions CI pipeline out of the box.</li>
+</ul>
 
 
 
