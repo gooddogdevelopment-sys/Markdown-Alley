@@ -1,5 +1,12 @@
-# Setting Up DbContext
+# Entity Framework Core DbContext
+
 The DbContext is the core class in Entity Framework Core (EF Core). It represents a session with the database and acts as a bridge between your domain entities and the database itself. It is responsible for querying, saving, and managing the entity objects during runtime.
+
+## Prerequisites
+
+- An existing .NET project (class library or web app).
+- A target database engine (e.g. PostgreSQL, SQL Server, or SQLite).
+- The EF Core CLI tools installed: `dotnet tool install --global dotnet-ef`.
 
 ## 1. Required Packages
 To get started, you need the core EF Core package, the design tools, and the data provider package for your specific database engine (e.g., PostgreSQL, SQL Server, SQLite).
@@ -12,7 +19,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 ## 2. Defining the Entities
 Before configuring the context, you need the data models (entities) that will be mapped to your database tables.
 
-```C#
+```csharp
 namespace Infrastructure.Data.Models;
 
 public class ExampleEntity
@@ -23,15 +30,15 @@ public class ExampleEntity
 }
 ```
 ## 3. Creating the AppDbContext Class
-Your custom context class must inherit from EF Core's base class. It exposes ```DbSet<TEntity>``` properties for each entity type you want to manage.
+Your custom context class must inherit from EF Core's base class. It exposes `DbSet<TEntity>` properties for each entity type you want to manage.
 
-```C#
+```csharp
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Data.Models;
 
 namespace Infrastructure.Data;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options);
+public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
     // Constructor accepting DbContextOptions, passing configuration to the base class. Uncomment if not using primary constructor
     /*
@@ -58,7 +65,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 ## 4. Registering in Dependency Injection
 In a modern .NET Core web application, you register the context in your Program.cs file using Dependency Injection (DI). This allows the context to be injected into your controllers, services, or repositories.
 
-```C#
+```csharp
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Data;
 
@@ -81,14 +88,20 @@ app.Run();
 ## 5. Applying Migrations
 Once the entities and the context are set up, use the EF Core tools via the .NET CLI to generate and apply the database schema.
 
-#### Create the initial migration:
+### Create the initial migration:
 ```sh
 dotnet ef migrations add InitialCreate
 
 dotnet ef migrations add InitialCreate -o Data/Migrations #With output directly specified
 ```
 
-#### Apply the migration to the database:
+### Apply the migration to the database:
 ```sh
 dotnet ef database update
 ```
+
+## See Also
+
+- [Auto Apply Migrations](AutoApplyMigrations.md) — apply pending migrations automatically at startup.
+- [Overriding SaveChanges](OverridingSaveChangesDbContext.md) — set `CreatedAt`/`UpdatedAt` timestamps automatically.
+- [Query Optimization](QueryOptimization.md) — EF Core querying performance techniques.
