@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.gooddogdevelopment.com/AI/Ollama/DockerSetup/">
+        <link rel="canonical" href="https://docs.gooddogdevelopment.com/AI/Ollama/OllamaDockerCompose/">
       
       
         <link rel="prev" href="../../..">
@@ -1748,6 +1748,8 @@
 
 
 <h1 id="docker-setup-for-ollama">Docker Setup For Ollama</h1>
+<p>Docker Compose setup for running Ollama with the Open WebUI frontend, with optional NVIDIA GPU support and a locked-down private network.</p>
+<p>Save either block below as <code>docker-compose.yml</code> and start it with <code>docker compose up -d</code>. Open WebUI is then available at <code>http://localhost:3000</code>.</p>
 <h2 id="standard-setup">Standard Setup</h2>
 <pre><code class="language-yml">services:
   ollama:
@@ -1825,7 +1827,7 @@ networks:
 </code></pre>
 <blockquote>
 <p><strong>NOTE</strong> 
-To download a model, the interal flag on the network needs to be set to false.</p>
+To download a model, the <code>internal</code> flag on the network needs to be set to <code>false</code> (or removed) so the container can reach the internet.</p>
 </blockquote>
 <h2 id="downloading-a-model">Downloading a model</h2>
 <pre><code class="language-bash">docker exec -it ollama ollama run gemma4

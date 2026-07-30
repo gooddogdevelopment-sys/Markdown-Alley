@@ -290,7 +290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AI/Ollama/DockerSetup/" class="md-nav__link">
+      <a href="../../../AI/Ollama/OllamaDockerCompose/" class="md-nav__link">
         
   
   
@@ -543,6 +543,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auto Apply Migrations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -559,6 +577,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1623,6 +1671,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1639,13 +1706,19 @@
 
 
 <h1 id="auto-apply-migrations">Auto Apply Migrations</h1>
-<p>Inside the Program.cs file, add the following code:</p>
+<p>Apply any pending EF Core migrations automatically at application startup.</p>
+<p>Add the following code in <code>Program.cs</code>, after <code>var app = builder.Build();</code> and before <code>app.Run();</code>:</p>
 <pre><code class="language-csharp">using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService&lt;AppDbContext&gt;();
     await db.Database.MigrateAsync();
 }
 </code></pre>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../DotNetDbContext/">DbContext Setup</a> — setting up <code>AppDbContext</code>, dependency injection, and EF Core migrations.</li>
+<li><a href="../OverridingSaveChangesDbContext/">Overriding SaveChanges</a> — automatically setting <code>CreatedAt</code>/<code>UpdatedAt</code> timestamps.</li>
+</ul>
 
 
 
