@@ -27,5 +27,8 @@ jobs:
           pip install mkdocs-material 
           # Add any other plugins here (e.g., mkdocs-minify-plugin)
 
+      - name: Validate build (strict)
+        run: mkdocs build --strict  # Fails on broken internal links, bad nav refs, and other warnings
+
       - name: Build and Deploy
         run: mkdocs gh-deploy --force

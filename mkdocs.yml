@@ -6,6 +6,17 @@ theme:
     scheme: slate
     primary: indigo
 
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    absolute_links: warn
+    unrecognized_links: warn
+    anchors: warn  # Requires MkDocs 1.6+
+
 extra:
   analytics:
     provider: google
