@@ -10,3 +10,40 @@ extra:
   analytics:
     provider: google
     property: G-CWQP6SC78V
+
+nav:
+  - Home: index.md
+  - AI:
+      - Ollama Docker Setup: AI/Ollama/DockerSetup.md
+  - .NET:
+      - Classes:
+          - Access Modifiers: Dotnet/Classes/AccessModifiers.md
+      - Database:
+          - DbContext Setup: Dotnet/Database/DotNetDbContext.md
+          - Auto Apply Migrations: Dotnet/Database/AutoApplyMigrations.md
+          - Overriding SaveChanges: Dotnet/Database/OverridingSaveChangesDbContext.md
+          - Query Optimization: Dotnet/Database/QueryOptimization.md
+      - Middleware:
+          - Global Error Handling: Dotnet/Middleware/GlobalErrorHandling.md
+      - CI/CD:
+          - GitHub Actions Build & Test: Dotnet/CI-CD/GithubBuildAndTest.md
+      - Coding Standards:
+          - EditorConfig Example: Dotnet/Coding-Standards/editorconfig.md
+      - Templates:
+          - .NET 10 Core API with PostgreSQL: Dotnet/Templates/Core10WPostgres.md
+      - Tutorials:
+          - Strategy Pattern: Dotnet/Tutorials/StrategyPattern.md
+  - TypeScript:
+      - NestJS:
+          - Basic Setup: Typescript/NestJS/BasicSetup.md
+          - Controllers:
+              - Swagger Setup: Typescript/NestJS/Controllers/SwaggerSetup.md
+              - Swagger Annotations: Typescript/NestJS/Controllers/SwaggerAnnotations.md
+      - Next.js:
+          - Setup: Typescript/NextJs/Setup.md
+          - Clerk Auth:
+              - Frontend Setup: Typescript/NextJs/ClerkAuth/ClerkAuthSetup.md
+  - General:
+      - APIs: General/APIs.md
+      - Coding Articles: General/CodingArticles.md
+      - Web Resources: General/WebResources.md
