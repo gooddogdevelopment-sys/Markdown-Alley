@@ -1,5 +1,18 @@
-# Example for Github Action Deploy Pipeline
-This is an example of how to configure a git repo to build, restore and test a project when changes are pushed to it. Create a .github\workflows folder and place the build.yml file in it. 
+# GitHub Actions Build & Test Workflow
+
+A GitHub Actions workflow that restores, builds, and tests a .NET solution on every push and pull request to `main`.
+
+## Prerequisites
+
+- A .NET solution (`.sln`) with at least one test project, hosted in a GitHub repository.
+- Push access to the repository so you can add workflow files and trigger runs.
+
+## Steps
+
+1. In the repository root, create a `.github/workflows` folder if it doesn't already exist.
+2. Add a `build.yml` file to that folder with the workflow below. Replace `your-project.sln` with your own solution file name, and set `dotnet-version` to the SDK version your project targets.
+3. Commit and push the file (or open a pull request) against `main`.
+4. Verify the run: open the repository's **Actions** tab, confirm the **Build & Test** workflow succeeds, and download the `test-results` artifact from the run summary to inspect the `.trx` output.
 
 ## Step Overview
 
@@ -36,13 +49,13 @@ jobs:
           dotnet-version: "10.x"
 
       - name: Restore dependencies
-        run: dotnet restore newsletter-api.sln
+        run: dotnet restore your-project.sln
 
       - name: Build
-        run: dotnet build newsletter-api.sln --no-restore --configuration Release
+        run: dotnet build your-project.sln --no-restore --configuration Release
 
       - name: Test
-        run: dotnet test newsletter-api.sln --no-build --configuration Release --logger "trx;LogFileName=test-results.trx"
+        run: dotnet test your-project.sln --no-build --configuration Release --logger "trx;LogFileName=test-results.trx"
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -51,3 +64,7 @@ jobs:
           name: test-results
           path: "**/*.trx"
 ```
+
+## See Also
+
+- [.NET 10 Core API with PostgreSQL Template](../Templates/Core10WPostgres.md) — ships with a GitHub Actions CI pipeline out of the box.
