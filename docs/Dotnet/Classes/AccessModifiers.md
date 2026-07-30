@@ -2,7 +2,7 @@
 
 Access modifiers control the visibility and accessibility of types and their members (fields, properties, methods, etc.). They determine which parts of your codebase can see and interact with a given member, making them a key tool for encapsulation.
 
-.NET provides six access modifiers: `public`, `private`, `protected`, `internal`, `protected internal`, and `private protected`.
+C# provides six access modifiers: `public`, `private`, `protected`, `internal`, `protected internal`, and `private protected`.
 
 For additional reference, see the [Microsoft documentation on access modifiers](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers).
 
