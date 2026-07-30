@@ -1,6 +1,6 @@
 # Markdown-Alley
 
-A personal collection of development documentation, notes, and resources. Hosted as a GitHub Pages site via Jekyll.
+A personal collection of development documentation, notes, and resources. Built with MkDocs Material and deployed to GitHub Pages.
 
 ## Table of Contents
 
