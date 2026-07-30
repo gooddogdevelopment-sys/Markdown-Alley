@@ -29,6 +29,8 @@ nav:
   - .NET:
       - Classes:
           - Access Modifiers: Dotnet/Classes/AccessModifiers.md
+      - Dependency Injection:
+          - Service Lifetimes: Dotnet/DependencyInjection/ServiceLifetimes.md
       - Database:
           - DbContext Setup: Dotnet/Database/DotNetDbContext.md
           - Auto Apply Migrations: Dotnet/Database/AutoApplyMigrations.md
