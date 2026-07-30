@@ -56,6 +56,9 @@ nav:
           - Setup: Typescript/NextJs/Setup.md
           - Clerk Auth:
               - Frontend Setup: Typescript/NextJs/ClerkAuth/ClerkAuthSetup.md
+  - DevOps:
+      - CI/CD:
+          - Pipeline Fundamentals: DevOps/CI-CD/PipelineFundamentals.md
   - General:
       - APIs: General/APIs.md
       - Coding Articles: General/CodingArticles.md

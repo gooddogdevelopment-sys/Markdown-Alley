@@ -30,3 +30,7 @@ A personal collection of development documentation, notes, and resources. Built 
 - [NestJS Swagger Setup](docs/Typescript/NestJS/Controllers/SwaggerSetup.md) — Installing and configuring Swagger docs in a NestJS app, including JWT Bearer auth support
 - [NestJS Swagger Controller Annotations](docs/Typescript/NestJS/Controllers/SwaggerAnnotations.md) — Annotating NestJS controllers with Swagger tags, auth, and response types
 
+### DevOps
+
+- [CI/CD Pipeline Fundamentals](docs/DevOps/CI-CD/PipelineFundamentals.md) — Stack-agnostic pipeline concepts: CI vs. CD, triggers, jobs/steps/stages, runners, artifacts, environments, and caching
+
