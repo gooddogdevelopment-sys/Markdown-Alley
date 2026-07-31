@@ -2,82 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.gooddogdevelopment.com/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/AI/Ollama/OllamaDockerCompose/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/DevOps/CI-CD/PipelineFundamentals/</loc>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/CI-CD/GithubBuildAndTest/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Classes/AccessModifiers/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Coding-Standards/editorconfig/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/AutoApplyMigrations/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/DotNetDbContext/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/OverridingSaveChangesDbContext/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Database/QueryOptimization/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.gooddogdevelopment.com/Dotnet/DependencyInjection/ServiceLifetimes/</loc>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Middleware/GlobalErrorHandling/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Templates/Core10WPostgres/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Dotnet/Tutorials/StrategyPattern/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/General/APIs/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/General/CodingArticles/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/General/WebResources/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Typescript/NestJS/BasicSetup/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Typescript/NestJS/Controllers/SwaggerAnnotations/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Typescript/NestJS/Controllers/SwaggerSetup/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Typescript/NextJs/Setup/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
          <loc>https://docs.gooddogdevelopment.com/Typescript/NextJs/ClerkAuth/ClerkAuthSetup/</loc>
-         <lastmod>2026-07-30</lastmod>
+         <lastmod>2026-07-31</lastmod>
     </url>
 </urlset>

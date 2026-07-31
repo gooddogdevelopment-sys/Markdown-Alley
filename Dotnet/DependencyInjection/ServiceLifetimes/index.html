@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.gooddogdevelopment.com/General/CodingArticles/">
+        <link rel="canonical" href="https://docs.gooddogdevelopment.com/Dotnet/DependencyInjection/ServiceLifetimes/">
       
       
-        <link rel="prev" href="../APIs/">
+        <link rel="prev" href="../../Classes/AccessModifiers/">
       
       
-        <link rel="next" href="../WebResources/">
+        <link rel="next" href="../../Database/DotNetDbContext/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Coding Articles - Markdown Alley</title>
+        <title>Service Lifetimes - Markdown Alley</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#coding-articles" class="md-skip">
+        <a href="#dependency-injection-and-service-lifetimes" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Markdown Alley" class="md-header__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
+    <a href="../../.." title="Markdown Alley" class="md-header__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Coding Articles
+              Service Lifetimes
             
           </span>
         </div>
@@ -198,7 +198,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Markdown Alley" class="md-nav__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
+    <a href="../../.." title="Markdown Alley" class="md-nav__button md-logo" aria-label="Markdown Alley" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -216,7 +216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -290,7 +290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AI/Ollama/OllamaDockerCompose/" class="md-nav__link">
+      <a href="../../../AI/Ollama/OllamaDockerCompose/" class="md-nav__link">
         
   
   
@@ -322,18 +322,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -354,7 +356,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -419,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/Classes/AccessModifiers/" class="md-nav__link">
+      <a href="../../Classes/AccessModifiers/" class="md-nav__link">
         
   
   
@@ -452,18 +454,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -484,7 +488,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -499,10 +503,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Dotnet/DependencyInjection/ServiceLifetimes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Lifetimes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -518,6 +549,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registering-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering Services
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructor-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor Injection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transient
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoped
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singleton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singleton
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captive-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Captive Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-lifetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing a Lifetime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -585,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/Database/DotNetDbContext/" class="md-nav__link">
+      <a href="../../Database/DotNetDbContext/" class="md-nav__link">
         
   
   
@@ -613,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/Database/AutoApplyMigrations/" class="md-nav__link">
+      <a href="../../Database/AutoApplyMigrations/" class="md-nav__link">
         
   
   
@@ -641,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/Database/OverridingSaveChangesDbContext/" class="md-nav__link">
+      <a href="../../Database/OverridingSaveChangesDbContext/" class="md-nav__link">
         
   
   
@@ -669,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/Database/QueryOptimization/" class="md-nav__link">
+      <a href="../../Database/QueryOptimization/" class="md-nav__link">
         
   
   
@@ -752,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/Middleware/GlobalErrorHandling/" class="md-nav__link">
+      <a href="../../Middleware/GlobalErrorHandling/" class="md-nav__link">
         
   
   
@@ -835,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/CI-CD/GithubBuildAndTest/" class="md-nav__link">
+      <a href="../../CI-CD/GithubBuildAndTest/" class="md-nav__link">
         
   
   
@@ -918,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/Coding-Standards/editorconfig/" class="md-nav__link">
+      <a href="../../Coding-Standards/editorconfig/" class="md-nav__link">
         
   
   
@@ -1001,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/Templates/Core10WPostgres/" class="md-nav__link">
+      <a href="../../Templates/Core10WPostgres/" class="md-nav__link">
         
   
   
@@ -1084,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Dotnet/Tutorials/StrategyPattern/" class="md-nav__link">
+      <a href="../../Tutorials/StrategyPattern/" class="md-nav__link">
         
   
   
@@ -1221,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Typescript/NestJS/BasicSetup/" class="md-nav__link">
+      <a href="../../../Typescript/NestJS/BasicSetup/" class="md-nav__link">
         
   
   
@@ -1296,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Typescript/NestJS/Controllers/SwaggerSetup/" class="md-nav__link">
+      <a href="../../../Typescript/NestJS/Controllers/SwaggerSetup/" class="md-nav__link">
         
   
   
@@ -1324,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Typescript/NestJS/Controllers/SwaggerAnnotations/" class="md-nav__link">
+      <a href="../../../Typescript/NestJS/Controllers/SwaggerAnnotations/" class="md-nav__link">
         
   
   
@@ -1415,7 +1554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Typescript/NextJs/Setup/" class="md-nav__link">
+      <a href="../../../Typescript/NextJs/Setup/" class="md-nav__link">
         
   
   
@@ -1490,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Typescript/NextJs/ClerkAuth/ClerkAuthSetup/" class="md-nav__link">
+      <a href="../../../Typescript/NextJs/ClerkAuth/ClerkAuthSetup/" class="md-nav__link">
         
   
   
@@ -1635,7 +1774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DevOps/CI-CD/PipelineFundamentals/" class="md-nav__link">
+      <a href="../../../DevOps/CI-CD/PipelineFundamentals/" class="md-nav__link">
         
   
   
@@ -1675,20 +1814,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1709,7 +1846,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1727,7 +1864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../APIs/" class="md-nav__link">
+      <a href="../../../General/APIs/" class="md-nav__link">
         
   
   
@@ -1752,19 +1889,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../General/CodingArticles/" class="md-nav__link">
         
   
   
@@ -1780,7 +1908,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1793,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WebResources/" class="md-nav__link">
+      <a href="../../../General/WebResources/" class="md-nav__link">
         
   
   
@@ -1841,6 +1968,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registering-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering Services
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructor-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor Injection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transient
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoped
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singleton" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singleton
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#captive-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Captive Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-lifetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing a Lifetime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1856,13 +2079,145 @@
 
 
 
-<h1 id="coding-articles">Coding Articles</h1>
+<h1 id="dependency-injection-and-service-lifetimes">Dependency Injection and Service Lifetimes</h1>
+<p>Dependency injection (DI) is the built-in pattern ASP.NET Core uses to supply a class with the services it depends on, rather than having the class construct them itself. Service lifetimes control how long each resolved instance lives and when a new one is created.</p>
+<p>The framework configures a service container (an <code>IServiceCollection</code> at startup, resolved through an <code>IServiceProvider</code> at runtime) so that constructor parameters are filled in automatically. Registering a service means telling the container which concrete type to hand out for a requested type, and with which lifetime.</p>
+<p>There are three lifetimes to choose from:</p>
 <ul>
-<li><a href="https://www.c-sharpcorner.com/article/how-to-generate-typescript-models-from-asp-net-core-dtos-using-openapi/">How to Generate Typescript Models From .NET Core Models</a></li>
-<li><a href="https://martinalderson.com/posts/anthropic-found-500-zero-days/">Who fixes the zero-days AI finds in abandoned software?</a></li>
-<li><a href="https://martinalderson.com/posts/huggingface-openai-exploit/">The first known runaway AI agent - or a very bad marketing stunt?</a></li>
-<li><a href="https://martinalderson.com/posts/figmas-woes-compound-with-claude-design/">Figma's woes compound with Claude Design</a></li>
-<li><a href="https://blog.pragmaticengineer.com/what-silicon-valley-gets-right-on-software-engineers/">What Silicon Valley "Gets" about Software Engineers that Traditional Companies Do Not</a></li>
+<li><strong>Transient</strong> — a new instance is created every time the service is requested. Best for lightweight, stateless services.</li>
+<li><strong>Scoped</strong> — one instance is shared within a single scope (per HTTP request in ASP.NET Core). Best for request-bound work such as an EF Core <code>DbContext</code>.</li>
+<li><strong>Singleton</strong> — one instance is created and reused for the entire application lifetime. Best for stateless or thread-safe shared state.</li>
+</ul>
+<p>For additional reference, see the <a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection">Microsoft documentation on dependency injection</a>.</p>
+<hr />
+<h2 id="registering-services">Registering Services</h2>
+<p>Services are registered against the <code>IServiceCollection</code> exposed by <code>builder.Services</code> in <code>Program.cs</code>. The common pattern registers an interface mapped to its implementation so consumers depend on the abstraction.</p>
+<pre><code class="language-csharp">var builder = WebApplication.CreateBuilder(args);
+
+// Interface -&gt; implementation
+builder.Services.AddScoped&lt;IEmailSender, SmtpEmailSender&gt;();
+
+// Concrete type only
+builder.Services.AddSingleton&lt;Clock&gt;();
+
+// Factory when construction needs logic or other services
+builder.Services.AddScoped&lt;IOrderService&gt;(sp =&gt;
+{
+    var repo = sp.GetRequiredService&lt;IOrderRepository&gt;();
+    return new OrderService(repo, DateTime.UtcNow);
+});
+
+var app = builder.Build();
+</code></pre>
+<hr />
+<h2 id="constructor-injection">Constructor Injection</h2>
+<p>The primary way to consume a service is to declare it as a constructor parameter. The container resolves the parameter when it creates the class. This is the preferred approach because dependencies are explicit and the type cannot be constructed without them.</p>
+<pre><code class="language-csharp">public class OrderController : ControllerBase
+{
+    private readonly IOrderService _orders;
+
+    public OrderController(IOrderService orders)
+    {
+        _orders = orders;
+    }
+
+    [HttpPost]
+    public IActionResult Create(OrderRequest request) =&gt;
+        Ok(_orders.Place(request));
+}
+</code></pre>
+<hr />
+<h2 id="transient">Transient</h2>
+<p><code>AddTransient</code> creates a new instance every time the service is requested. Use it for lightweight, stateless services. Because a fresh object is produced on each resolution, transient services never share state between callers.</p>
+<pre><code class="language-csharp">builder.Services.AddTransient&lt;IGuidProvider, GuidProvider&gt;();
+
+public class GuidProvider : IGuidProvider
+{
+    public Guid NewId() =&gt; Guid.NewGuid();
+}
+</code></pre>
+<p>Two constructor parameters of the same transient type resolve to two different instances.</p>
+<hr />
+<h2 id="scoped">Scoped</h2>
+<p><code>AddScoped</code> creates one instance per scope. In ASP.NET Core, a scope is created per HTTP request, so every service resolved during a single request shares the same instance, and the next request gets a new one. This is the right default for services tied to a unit of work, such as an Entity Framework Core <code>DbContext</code>.</p>
+<pre><code class="language-csharp">builder.Services.AddScoped&lt;IOrderRepository, OrderRepository&gt;();
+
+// EF Core registers DbContext as scoped by default
+builder.Services.AddDbContext&lt;AppDbContext&gt;(options =&gt;
+    options.UseNpgsql(builder.Configuration.GetConnectionString(&quot;Default&quot;)));
+</code></pre>
+<p>Another common use is a per-request context object, such as a service that exposes the current user resolved from the incoming request. Registering it as scoped guarantees every service handling the same request sees the same user, while each new request gets a fresh instance.</p>
+<pre><code class="language-csharp">builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped&lt;ICurrentUser, CurrentUser&gt;();
+
+public class CurrentUser : ICurrentUser
+{
+    public CurrentUser(IHttpContextAccessor accessor)
+    {
+        var user = accessor.HttpContext?.User;
+        UserId = user?.FindFirst(&quot;sub&quot;)?.Value;
+    }
+
+    public string? UserId { get; }
+}
+</code></pre>
+<p>Outside of a request (for example in a background task), you must create a scope explicitly with <code>IServiceScopeFactory</code> before resolving scoped services.</p>
+<pre><code class="language-csharp">using var scope = serviceScopeFactory.CreateScope();
+var repo = scope.ServiceProvider.GetRequiredService&lt;IOrderRepository&gt;();
+</code></pre>
+<hr />
+<h2 id="singleton">Singleton</h2>
+<p><code>AddSingleton</code> creates a single instance the first time it is requested (or at registration if you supply an instance) and reuses it for the lifetime of the application. Use it for stateless services or shared state that is safe for concurrent access. Singletons must be thread-safe because they are shared across all requests.</p>
+<pre><code class="language-csharp">builder.Services.AddSingleton&lt;IClock, SystemClock&gt;();
+
+// Registering an existing instance
+builder.Services.AddSingleton(new MetricsCollector());
+</code></pre>
+<p>A common use is an in-memory cache shared across every request. Because it is created once and accessed concurrently, its internal state must be thread-safe — here a <code>ConcurrentDictionary</code> provides that guarantee.</p>
+<pre><code class="language-csharp">builder.Services.AddSingleton&lt;ILookupCache, LookupCache&gt;();
+
+public class LookupCache : ILookupCache
+{
+    private readonly ConcurrentDictionary&lt;string, string&gt; _cache = new();
+
+    public string GetOrAdd(string key, Func&lt;string, string&gt; factory) =&gt;
+        _cache.GetOrAdd(key, factory);
+}
+</code></pre>
+<hr />
+<h2 id="captive-dependencies">Captive Dependencies</h2>
+<p>A captive dependency occurs when a longer-lived service holds a reference to a shorter-lived one, keeping it alive past its intended lifetime. The most common mistake is injecting a scoped service (or a <code>DbContext</code>) into a singleton — the scoped instance is effectively promoted to a singleton and is shared across requests, which is usually a bug and not thread-safe.</p>
+<pre><code class="language-csharp">// Problematic: singleton captures a scoped DbContext
+public class CacheWarmer // registered as singleton
+{
+    private readonly AppDbContext _db; // scoped — now captive
+    public CacheWarmer(AppDbContext db) =&gt; _db = db;
+}
+</code></pre>
+<p>Resolve a fresh scope when a singleton needs scoped work:</p>
+<pre><code class="language-csharp">public class CacheWarmer
+{
+    private readonly IServiceScopeFactory _scopeFactory;
+    public CacheWarmer(IServiceScopeFactory scopeFactory) =&gt;
+        _scopeFactory = scopeFactory;
+
+    public void Warm()
+    {
+        using var scope = _scopeFactory.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService&lt;AppDbContext&gt;();
+        // use db within this scope
+    }
+}
+</code></pre>
+<p>In the Development environment the framework validates scopes at startup and throws if a scoped service is resolved from the root provider, which helps catch these errors early.</p>
+<hr />
+<h2 id="choosing-a-lifetime">Choosing a Lifetime</h2>
+<p>Transient suits stateless helpers where a fresh instance is cheap and sharing is undesirable. Scoped suits anything representing a single request's unit of work, most notably a <code>DbContext</code> and the repositories built on it. Singleton suits stateless services or carefully synchronized shared state such as caches, clocks, and configuration holders. When in doubt, prefer scoped for request-bound work and singleton only for genuinely shared, thread-safe state.</p>
+<hr />
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="../../Database/DotNetDbContext/">DbContext Setup</a> — registering <code>AppDbContext</code> as a scoped service via <code>AddDbContext</code>.</li>
+<li><a href="../../Middleware/GlobalErrorHandling/">Global Error Handling</a> — <code>IExceptionHandler</code> registered through the same service container.</li>
 </ul>
 
 
@@ -1915,10 +2270,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
